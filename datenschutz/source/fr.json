@@ -121,7 +121,7 @@
       "paragraphs": [
         "Selon les fonctions utilisées, les données nécessaires sont reçues par notre hébergeur, Google/Firebase, Apple, RevenueCat, OpenAI et Deepgram, ainsi que par les services de sauvegarde, email, partage ou impression que tu choisis. Nous ne vendons pas le contenu de ton inventaire et ne l'utilisons pas à des fins de publicité personnalisée.",
         "Les conditions de traitement de Google dépendent du service. Pour Cloud Firestore, Google renvoie à son avenant de traitement des données Google Cloud. L’avenant de traitement des données publié par OpenAI fait partie de son contrat de services. RevenueCat intègre les clauses contractuelles types de l’UE dans son avenant de traitement lorsqu’il s’applique au contrat du client. Deepgram renvoie à des accords clients incluant ces clauses pour les données des clients.",
-        "Les fournisseurs internationaux peuvent traiter des données hors de l'Espace économique européen, notamment aux États-Unis. Une région Firestore européenne ne signifie pas que tous les services traitent uniquement en Europe. Les garanties et mécanismes de transfert confirmés pour ce service sont : [[transfer_safeguards]]. Tu peux demander des précisions et, le cas échéant, une copie des garanties à notre contact pour la confidentialité."
+        "Les fournisseurs internationaux peuvent traiter des données hors de l'Espace économique européen, notamment aux États-Unis. Une région Firestore européenne ne signifie pas que tous les services traitent uniquement en Europe. Tu peux demander des précisions et, le cas échéant, une copie des garanties à notre contact pour la confidentialité."
       ]
     },
     {

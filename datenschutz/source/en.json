@@ -121,7 +121,7 @@
       "paragraphs": [
         "Depending on the features you use, our hosting provider, Google/Firebase, Apple, RevenueCat, OpenAI and Deepgram receive the information needed for their role. Other recipients include backup, email, sharing and printing services you choose. We do not sell your inventory content or use it for personalised advertising.",
         "Google’s applicable data processing terms depend on the service. For Cloud Firestore, Google refers to its Cloud Data Processing Addendum. The published OpenAI Data Processing Addendum forms part of the OpenAI Services Agreement. RevenueCat incorporates EU Standard Contractual Clauses through its Data Processing Addendum where it applies to the customer agreement. Deepgram refers to customer agreements with EU Standard Contractual Clauses for customer data.",
-        "International providers may process information outside the European Economic Area, particularly in the United States. A European Firestore region alone does not mean every service processes information exclusively in Europe. The safeguards and transfer mechanisms confirmed for this deployment are: [[transfer_safeguards]]. You can request further information and, where applicable, a copy of relevant safeguards from our privacy contact."
+        "International providers may process information outside the European Economic Area, particularly in the United States. A European Firestore region alone does not mean every service processes information exclusively in Europe. You can request further information and, where applicable, a copy of relevant safeguards from our privacy contact."
       ]
     },
     {

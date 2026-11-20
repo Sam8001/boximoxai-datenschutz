@@ -121,7 +121,7 @@
       "paragraphs": [
         "Según las funciones utilizadas, reciben los datos necesarios nuestro proveedor de alojamiento, Google/Firebase, Apple, RevenueCat, OpenAI y Deepgram, además de los servicios de copias, correo, envío o impresión que elijas. No vendemos el contenido de tu inventario ni lo utilizamos para publicidad personalizada.",
         "Las condiciones de tratamiento de Google dependen del servicio. Para Cloud Firestore, Google remite a su anexo de tratamiento de datos de Google Cloud. El anexo de tratamiento de datos de OpenAI forma parte de su acuerdo de servicios. RevenueCat incorpora las cláusulas contractuales tipo de la UE mediante su anexo de tratamiento cuando este se aplica al contrato del cliente. Deepgram remite a acuerdos con clientes que incluyen estas cláusulas para los datos de clientes.",
-        "Los proveedores internacionales pueden tratar datos fuera del Espacio Económico Europeo, especialmente en Estados Unidos. Elegir una región europea de Firestore no implica que todos los servicios traten datos únicamente en Europa. Las garantías y mecanismos de transferencia confirmados para este servicio son: [[transfer_safeguards]]. Puedes pedir más información y, cuando corresponda, una copia de las garantías a nuestro contacto de privacidad."
+        "Los proveedores internacionales pueden tratar datos fuera del Espacio Económico Europeo, especialmente en Estados Unidos. Elegir una región europea de Firestore no implica que todos los servicios traten datos únicamente en Europa. Puedes pedir más información y, cuando corresponda, una copia de las garantías a nuestro contacto de privacidad."
       ]
     },
     {

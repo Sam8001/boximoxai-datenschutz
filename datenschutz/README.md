@@ -16,28 +16,17 @@ Jede Fassung enthält einen direkt erreichbaren Abschnitt
 **`#delete-account`** mit einer E-Mail-Möglichkeit für Löschanfragen. Es wird
 keine Nachricht automatisch versendet.
 
-## Aktueller Status: inhaltlich ausgearbeiteter Entwurf
+## Veroeffentlichung
 
-Der Serverstandort Helsinki (Finnland) und die Firestore-Region eur3 sind eingetragen.
-Offen sind der Name des Hostinganbieters, Löschfristen, bestätigte
-Drittlandgarantien sowie Zielgruppe/Minderjährige sind noch nicht bestätigt.
-Der Fotoabgleich ist deaktiviert. Offene Angaben zum Betrieb sind in allen Sprachen **sichtbar markiert**. Eine fertige
-Datenschutzerklärung darf diese offenen Stellen nicht enthalten.
+Die HTML-Seiten sind als statische Dateien fuer GitHub Pages vorbereitet.
+Sie beschreiben die eingesetzten Dienste und verlinken deren veroeffentlichte
+Vertragsbedingungen. Der fuer das Deepgram-Konto geltende Vertrag steht noch aus.
+Sobald er vorliegt, die tatsaechlich anwendbaren Garantien im Abschnitt zu
+Drittlanduebermittlungen ergaenzen und die Seiten erneut erzeugen.
 
-Außerdem bestehen tatsächliche Veröffentlichungsthemen im App-/Backend-Code:
-Die Kontolöschung fordert jetzt zuerst die Entfernung des Cloud-Inventars und der
-Cloud-Fotos an und entfernt anschließend das Firebase-Anmeldekonto. Ein verlässlicher
-Prozess für weitere verbundene Credit-, Kauf- und Feedbackdaten muss vor Veröffentlichung
-eingerichtet werden. Die App fragt vor KI-Anfragen nach einer Freigabe. Sobald die
-Datenschutzseite eine HTTPS-Adresse hat, wird sie beim Flutter-Build als
-`--dart-define=BOXIMOXY_PRIVACY_URL=https://...` gesetzt. Dann erscheint der
-Link in den Einstellungen und im Freigabedialog.
-Details und Belege stehen in `ANALYSE_UND_STORE_HINWEISE.md`.
-
-Die Texte beschreiben die geprüfte lokale Implementierung. Sie bestätigen keine
-Produktivkonfiguration und stellen keine Zusage einer Store-Freigabe dar.
-Rechtsgrundlagen, Verträge und echte Betriebsfristen müssen zum konkreten Betrieb
-passen. Eine abschließende rechtliche Prüfung ist vor Veröffentlichung sinnvoll.
+Die App fragt vor KI-Anfragen nach einer Freigabe. Die oeffentliche HTTPS-Adresse
+wird beim Flutter-Build als `--dart-define=BOXIMOXY_PRIVACY_URL=https://...`
+gesetzt. Dann erscheint der Link in den Einstellungen und im Freigabedialog.
 
 Die Fassungen berücksichtigen die neue optionale Ende-zu-Ende-verschlüsselte
 Inventar-Synchronisierung (Protokoll 2). Sie erklären Schlüsselverwaltung,
@@ -96,7 +85,7 @@ inhaltlichen Aktualisierungen ebenfalls anpassen.
 Es wurde **nichts veröffentlicht**, kein Git-Remote eingerichtet und kein Server
 geändert. Für eine spätere manuelle Veröffentlichung:
 
-1. Offene Angaben und die genannten Veröffentlichungsthemen abschließen.
+1. Die fuer den Betrieb geltenden Anbietervereinbarungen pruefen.
 2. Die freigegebenen Seiten generieren und prüfen.
 3. **Nur den Inhalt von `site`** in das dafür vorgesehene Pages-Repository bzw.
    dessen Veröffentlichungsordner übernehmen. Alle sieben HTML-Dateien gemeinsam

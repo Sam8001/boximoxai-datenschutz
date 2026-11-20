@@ -49,7 +49,6 @@
       "fr": "Les données de compte, d’achat et de crédits sont conservées pour fournir et restaurer les achats, vérifier les débits et éviter les transactions en double. Les justificatifs nécessaires peuvent subsister après la suppression du compte, notamment en raison d’obligations légales ou de réclamations précises",
       "nl": "Account-, aankoop- en creditgegevens worden bewaard om aankopen te leveren en te herstellen, afschrijvingen te controleren en dubbele transacties te voorkomen. Na accountverwijdering kunnen noodzakelijke bewijsstukken behouden blijven, met name voor wettelijke verplichtingen of concrete claims"
     },
-    "transfer_safeguards": null,
     "audience": {
       "de": "BoximoxAI richtet sich an ein allgemeines Publikum. Die App legt kein Mindestalter fest",
       "en": "BoximoxAI is intended for a general audience. The app does not set a minimum age",

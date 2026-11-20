@@ -15,14 +15,14 @@ IDS = ("overview", "controller", "local", "family", "account", "ai", "permission
        "purchases", "feedback", "security", "retention", "transfers",
        "delete-account", "rights", "website", "updates")
 FIELDS = ("backend_hosting", "firestore_region", "feedback_retention",
-          "technical_retention", "billing_retention", "transfer_safeguards", "audience", "storage_region")
+          "technical_retention", "billing_retention", "audience", "storage_region")
 LABELS = {
-    "de": ["Backend-Anbieter und Land", "Firestore-Region", "Frist für Feedback und Kontakt", "Frist für Protokolle und Nutzung", "Frist für Konto und Abrechnung", "bestätigte internationale Übermittlungsgarantien", "Zielgruppe und Minderjährige"],
-    "en": ["backend provider and country", "Firestore region", "feedback and contact retention", "logs and usage retention", "account and billing retention", "confirmed international transfer safeguards", "intended audience and minors"],
-    "es": ["proveedor y país del servidor", "región de Firestore", "conservación de comentarios y consultas", "conservación de registros y uso", "conservación de cuenta y facturación", "garantías internacionales confirmadas", "público destinatario y menores"],
-    "it": ["fornitore e paese del backend", "regione Firestore", "conservazione di feedback e contatti", "conservazione di log e utilizzo", "conservazione di account e contabilizzazione", "garanzie confermate per i trasferimenti internazionali", "destinatari e minori"],
-    "fr": ["hébergeur et pays du serveur", "région Firestore", "conservation des commentaires et contacts", "conservation des journaux et usages", "conservation des comptes et facturation", "garanties internationales confirmées", "public visé et mineurs"],
-    "nl": ["backendaanbieder en land", "Firestore-regio", "bewaring van feedback en contact", "bewaring van logs en gebruik", "bewaring van account en afrekening", "bevestigde internationale doorgiftewaarborgen", "doelgroep en minderjarigen"],
+    "de": ["Backend-Anbieter und Land", "Firestore-Region", "Frist für Feedback und Kontakt", "Frist für Protokolle und Nutzung", "Frist für Konto und Abrechnung", "Zielgruppe und Minderjährige"],
+    "en": ["backend provider and country", "Firestore region", "feedback and contact retention", "logs and usage retention", "account and billing retention", "intended audience and minors"],
+    "es": ["proveedor y país del servidor", "región de Firestore", "conservación de comentarios y consultas", "conservación de registros y uso", "conservación de cuenta y facturación", "público destinatario y menores"],
+    "it": ["fornitore e paese del backend", "regione Firestore", "conservazione di feedback e contatti", "conservazione di log e utilizzo", "conservazione di account e contabilizzazione", "destinatari e minori"],
+    "fr": ["hébergeur et pays du serveur", "région Firestore", "conservation des commentaires et contacts", "conservation des journaux et usages", "conservation des comptes et facturation", "public visé et mineurs"],
+    "nl": ["backendaanbieder en land", "Firestore-regio", "bewaring van feedback en contact", "bewaring van logs en gebruik", "bewaring van account en afrekening", "doelgroep en minderjarigen"],
 }
 for _language, _label in {
     "de": "Region des verschlüsselten Foto-Speichers", "en": "encrypted photo storage region",
@@ -58,14 +58,77 @@ LINKS = (
     ("LDI NRW", "https://www.ldi.nrw.de/"),
 )
 CSS = """
-:root{color-scheme:light dark;--bg:#f5f7fb;--surface:#fff;--ink:#172337;--muted:#46566d;--line:#d5deeb;--accent:#075ec6;--note:#fff4d6}
-*{box-sizing:border-box}html{scroll-padding-top:1rem}body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-main,header,footer{max-width:56rem;margin:auto;padding:1.5rem}header{padding-top:2.5rem}main{background:var(--surface);border:1px solid var(--line);border-radius:1rem}footer{padding-bottom:3rem}
-h1{font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.2;margin:.8rem 0}h2{font-size:1.35rem;line-height:1.4;margin:2.2rem 0 .6rem}p{margin:.8rem 0}a{color:var(--accent);text-underline-offset:.18em;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}address{font-style:normal;overflow-wrap:anywhere}
-nav ul,.providers{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;list-style:none;padding:0}nav a{display:inline-block;padding:.25rem 0}.meta{color:var(--muted)}.notice{padding:1rem;border:1px solid #9a700e;border-radius:.7rem;background:var(--note)}.pending{background:var(--note);color:var(--ink);padding:.08rem .2rem;border-bottom:2px dotted #9a700e;overflow-wrap:anywhere}.contact{padding:1rem;background:var(--bg);border-radius:.6rem}.skip{position:absolute;left:1rem;top:-5rem;background:var(--surface);padding:.5rem}.skip:focus{top:1rem}.language-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;list-style:none;padding:0}.language-list li{padding:1rem;border:1px solid var(--line);border-radius:.6rem}.language-list p{margin:.4rem 0}
-@media(prefers-color-scheme:dark){:root{--bg:#101722;--surface:#192335;--ink:#eaf0fa;--muted:#b3c1d5;--line:#40516a;--accent:#90c0ff;--note:#3b301b}}
-@media(max-width:40rem){main,header,footer{padding:1.1rem}main{border-radius:0;border-left:0;border-right:0}}
-@media print{body,main{background:#fff;color:#000}header,main,footer{max-width:none;border:0}nav,.skip{display:none}a{color:#000}h2{break-after:avoid}.contact{break-inside:avoid}.pending{border:1px solid #000}.notice{border:2px solid #000}}
+:root {
+  color-scheme: light dark;
+  --bg: #f4f7fc; --surface: #fff; --ink: #14233a; --muted: #455772;
+  --line: #dbe4f1; --accent: #0952ae; --soft: #eaf2ff; --note: #fff4d6;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 1rem/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.wrap { width: min(calc(100% - 2rem), 74rem); margin-inline: auto; }
+.masthead { background: var(--surface); border-bottom: 1px solid var(--line); }
+.topbar { display: flex; justify-content: space-between; align-items: center; gap: .75rem 2rem; flex-wrap: wrap; padding-block: .8rem; }
+.brand { font-weight: 800; letter-spacing: -.035em; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+nav ul, .providers, .language-list { margin: 0; list-style: none; padding: 0; }
+.languages ul, .providers { display: flex; flex-wrap: wrap; gap: .35rem; }
+.languages a, .providers a { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .35rem .7rem; border-radius: .55rem; }
+.languages a { text-decoration: none; }
+.languages a[aria-current] { background: var(--soft); font-weight: 700; }
+.hero { padding-block: clamp(1.5rem, 5vw, 3.75rem); }
+.hero > p { max-width: 65ch; }
+.meta { color: var(--muted); font-size: .9rem; }
+h1, h2 { line-height: 1.22; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 5vw, 3.7rem); letter-spacing: -.045em; margin: 0 0 .75rem; }
+h2 { font-size: clamp(1.15rem, 2vw, 1.45rem); margin: 0 0 .85rem; }
+p { margin: .75rem 0; }
+a { color: var(--accent); text-underline-offset: .18em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.action { display: inline-flex; align-items: center; min-height: 2.75rem; padding: .5rem .85rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--soft); font-weight: 650; }
+.layout { display: grid; gap: 1rem; align-items: start; }
+.toc, article, .language-list li { border: 1px solid var(--line); border-radius: 1rem; background: var(--surface); }
+.toc { padding: 1rem; }
+.toc h2 { margin-bottom: .4rem; }
+.toc ol { list-style: none; padding: 0; margin: 0; }
+.toc a { display: block; padding: .43rem .5rem; border-radius: .45rem; line-height: 1.4; text-decoration: none; }
+.toc a:hover, .toc a:focus-visible { background: var(--soft); text-decoration: underline; }
+article { min-width: 0; padding: clamp(1rem, 4vw, 2.6rem); }
+article section + section { border-top: 1px solid var(--line); margin-top: 1.6rem; padding-top: 1.6rem; }
+article section > p { max-width: 72ch; }
+article h2:target { color: var(--accent); }
+address { font-style: normal; overflow-wrap: anywhere; }
+.contact { padding: 1rem; border-radius: .75rem; background: var(--soft); }
+.providers a { border: 1px solid var(--line); }
+footer { padding-block: 1.5rem 2.5rem; }
+footer .contact { background: var(--surface); }
+.skip { position: absolute; left: 1rem; top: -6rem; background: var(--surface); padding: .6rem; z-index: 1; }
+.skip:focus { top: 1rem; }
+.language-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .8rem; }
+.language-list li { padding: 1rem; }
+.language-list h2 { margin: 0; }
+.language-list h2 a { display: flex; align-items: center; min-height: 2.75rem; }
+.language-list p { color: var(--muted); margin: .4rem 0; }
+.notice, .pending { background: var(--note); color: var(--ink); }
+.notice { padding: .9rem; border: 1px solid #9a700e; border-radius: .65rem; }
+.pending { border-bottom: 2px dotted #9a700e; overflow-wrap: anywhere; }
+@media (min-width: 64rem) {
+  .layout { grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); gap: 1.5rem; }
+  .toc { position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow: auto; }
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f1726; --surface: #172337; --ink: #edf4ff; --muted: #b9c7dc; --line: #384960; --accent: #a5ceff; --soft: #203758; --note: #3b301b; }
+}
+@media print {
+  :root { color-scheme: light; --surface: #fff; --ink: #000; --bg: #fff; --soft: #fff; --accent: #000; }
+  .wrap { width: 100%; } .layout { display: block; }
+  .masthead, .toc, .skip, .hero .action { display: none; }
+  .hero, article { padding: 0; border: 0; }
+  h2 { break-after: avoid; } .contact { break-inside: avoid; }
+}
 """
 
 
@@ -97,7 +160,7 @@ def rich(text: str, settings: dict, content: dict) -> str:
 def email_link(settings: dict, lang: str) -> str:
     label, subject, body = REQUESTS[lang]
     href = f'mailto:{settings["email"]}?subject={quote(subject)}&body={quote(body)}'
-    return f'<p><a href="{esc(href)}">{esc(label)}</a></p>'
+    return f'<p><a class="action" href="{esc(href)}">{esc(label)}</a></p>'
 
 
 def contact(settings: dict, lang: str) -> str:
@@ -106,21 +169,24 @@ def contact(settings: dict, lang: str) -> str:
 
 
 def shell(lang: str, title: str, intro: str, body: str, settings: dict,
-          content: dict, translations: dict, pending: bool) -> str:
+          content: dict, translations: dict, pending: bool, *, landing: bool = False) -> str:
     links = ''.join(f'<li><a href="{code}.html" lang="{code}" hreflang="{code}"'
-                    f'{" aria-current=\"page\"" if code == lang else ""}>{esc(translations[code]["language"])}</a></li>' for code in LANGS)
+                    f'{" aria-current=\"page\"" if code == lang and not landing else ""}>{esc(translations[code]["language"])}</a></li>' for code in LANGS)
     alternates = ''.join(f'<link rel="alternate" hreflang="{code}" href="{code}.html">' for code in LANGS)
     robots = '<meta name="robots" content="noindex,nofollow">' if pending else ''
     banner = f'<aside class="notice" role="note">{esc(content["draft"])}</aside>' if pending else ''
+    deletion = '' if landing else f'<a class="action" href="#delete-account">{esc(REQUESTS[lang][0])}</a>'
     return f'''<!doctype html>
 <html lang="{lang}">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{esc(intro)}"><meta name="referrer" content="no-referrer">{robots}
 <title>{esc(title)}</title>{alternates}<style>{CSS}</style></head>
 <body><a class="skip" href="#main">{esc(SKIP[lang])}</a>
-<header><a href="index.html">BoximoxAI</a><nav aria-label="{esc(content["languages"])}"><ul>{links}</ul></nav>
-<h1>{esc(title)}</h1><p>{esc(intro)}</p><p class="meta">{esc(content["updated_label"])}: <time datetime="{esc(settings["updated"])}">{esc(settings["updated"])}</time></p>{banner}</header>
-<main id="main">{body}</main><footer><p>{esc(content["contact_label"])}</p>{contact(settings, lang)}</footer></body></html>
+<div class="masthead"><div class="topbar wrap"><a class="brand" href="index.html">{esc(settings["app_name"])}</a>
+<nav class="languages" aria-label="{esc(content["languages"])}"><ul>{links}</ul></nav></div></div>
+<header class="hero wrap"><h1>{esc(title)}</h1><p>{esc(intro)}</p>
+<p class="meta">{esc(content["updated_label"])}: <time datetime="{esc(settings["updated"])}">{esc(settings["updated"])}</time></p>{deletion}{banner}</header>
+<main class="wrap" id="main">{body}</main><footer class="wrap"><h2>{esc(content["contact_label"])}</h2>{contact(settings, lang)}</footer></body></html>
 '''
 
 
@@ -132,7 +198,7 @@ def build() -> tuple[dict[str, str], list[str]]:
     for code, content in translations.items():
         if content["lang"] != code or tuple(section["id"] for section in content["sections"]) != IDS:
             raise ValueError(f"Inconsistent language/sections: {code}")
-        toc = f'<nav aria-label="{esc(content["contents"])}"><h2>{esc(content["contents"])}</h2><ol>'
+        toc = f'<nav class="toc" aria-label="{esc(content["contents"])}"><h2>{esc(content["contents"])}</h2><ol>'
         toc += ''.join(f'<li><a href="#{section["id"]}">{esc(section["title"])}</a></li>' for section in content["sections"]) + '</ol></nav>'
         sections = []
         for section in content["sections"]:
@@ -143,13 +209,13 @@ def build() -> tuple[dict[str, str], list[str]]:
             if section["id"] == "updates":
                 extra = '<ul class="providers">' + ''.join(f'<li><a href="{esc(url)}" rel="noreferrer">{esc(name)}</a></li>' for name, url in LINKS) + '</ul>'
             sections.append(f'<section aria-labelledby="heading-{section["id"]}"><h2 id="{section["id"]}"><span id="heading-{section["id"]}">{esc(section["title"])}</span></h2>{paragraphs}{extra}</section>')
-        pages[f'{code}.html'] = shell(code, content["title"], content["intro"], toc + ''.join(sections), settings, content, translations, bool(missing))
+        pages[f'{code}.html'] = shell(code, content["title"], content["intro"], f'<div class="layout">{toc}<article>{"".join(sections)}</article></div>', settings, content, translations, bool(missing))
     choices = '<ul class="language-list">' + ''.join(
         f'<li lang="{code}"><h2><a href="{code}.html" hreflang="{code}">{esc(c["language"])}</a></h2><p>{esc(c["title"])}</p><p><a href="{code}.html#delete-account">{esc(REQUESTS[code][0])}</a></p></li>'
         for code, c in translations.items()) + '</ul>'
     pages['index.html'] = shell('en', 'BoximoxAI · Privacy / Datenschutz',
                                'Deutsch · English · Español · Italiano · Français · Nederlands',
-                               choices, settings, translations['en'], translations, bool(missing))
+                               choices, settings, translations['en'], translations, bool(missing), landing=True)
     return pages, missing
 
 
