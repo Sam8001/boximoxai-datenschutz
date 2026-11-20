@@ -1,0 +1,162 @@
+{
+  "lang": "nl",
+  "language": "Nederlands",
+  "title": "Privacyverklaring van BoximoxAI",
+  "intro": "Hier lees je welke gegevens BoximoxAI verwerkt, waarom die nodig zijn en hoe je ze kunt beheren of laten verwijderen.",
+  "updated_label": "Laatst bijgewerkt",
+  "draft": "Concept: de gemarkeerde gegevens moeten vóór publicatie worden bevestigd en aangevuld.",
+  "pending": "Vóór publicatie aanvullen",
+  "contents": "Inhoud",
+  "languages": "Taal",
+  "contact_label": "Privacycontact",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "De belangrijkste punten",
+      "paragraphs": [
+        "Je inventaris — huizen of kantoren, kamers, dozen, spullen en opgeslagen foto’s — wordt eerst lokaal op je apparaat beheerd. Gewone zoekopdrachten en het lezen van BoximoxAI-QR-codes gebeuren lokaal. Fotosynchronisatie is uitgeschakeld. Foto’s en miniaturen blijven tijdens de synchronisatie op het apparaat.",
+        "Aanmelden, aankopen, AI-functies en het versturen van feedback gebruiken online diensten. Als je een AI-analyse aanvraagt, gaat de gekozen inhoud naar onze backend en de betrokken AI-aanbieders. Je account verwijderen wist niet automatisch je lokale inventaris of zelf geëxporteerde back-ups."
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Wie verantwoordelijk is voor je gegevens",
+      "paragraphs": [
+        "De hieronder genoemde exploitant is verantwoordelijk voor de verwerking in verband met BoximoxAI. Je kunt via het genoemde e-mailadres vragen stellen over privacy of een verzoek indienen om je rechten uit te oefenen."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Inventaris, foto's en back-ups op je apparaat",
+      "paragraphs": [
+        "Lokaal worden onder meer locatie- en kamernamen, doosnamen en -nummers, categorieën, beschrijvingen, aantallen, statussen en behandelingsinstructies opgeslagen. Dat geldt ook voor optionele doos- en voorwerpfoto's met miniaturen. Namen zoals ‘Huis 1’ voer je zelf in; het zijn geen GPS-locaties. Ook je taal, weergavevoorkeur en gekozen locatie kunnen lokaal worden verwerkt.",
+        "Deze gegevens zijn nodig om de gevraagde inventarisfuncties te leveren. De grondslag is artikel 6, lid 1, onder b AVG. Je bepaalt zelf welke optionele gegevens en foto's je toevoegt. Vermijd onnodige gegevens over anderen en bijzonder gevoelige inhoud.",
+        "Bij het exporteren van een back-up of afdrukdocument kies je de opslagplek, afdrukdienst of ontvanger. Back-ups kunnen inventaris en foto's bevatten en hebben geen extra wachtwoordversleuteling van BoximoxAI. Bewaar ze zorgvuldig. Zelfgekozen cloud-, bestands-, deel- en afdrukdiensten hanteren hun eigen voorwaarden. Afhankelijk van je apparaatinstellingen kunnen back-updiensten van Apple of Google ook appgegevens meenemen.",
+        "Apparaatsynchronisatie is optioneel en moet in de instellingen worden ingericht. De inventarisgegevens die je invoert worden overgedragen, waaronder namen, beschrijvingen, aantallen, categorieën, koppelingen, behandelingsinstructies. Een lokale kopie blijft beschikbaar voor offlinegebruik. Versleutelde inventariskopieën gaan via onze backend naar Google Cloud Firestore. We leveren deze functie op jouw verzoek op grond van artikel 6, lid 1, onder b AVG.",
+        "Synchronisatie gebruikt AES-256-GCM met willekeurige nonces en afzonderlijke sleutels, afgeleid van een willekeurige 256-bitsleutel. De herstelsleutel staat in de beveiligde sleutelopslag van je apparaat en wordt door de app niet naar ons of Firebase gestuurd. Andere apparaten worden met hetzelfde account ingesteld via een goedgekeurde QR-koppeling of door de herstelsleutel in te voeren. Bewaar hem goed: zonder de sleutel en zonder een ingesteld apparaat kunnen ook wij je cloudinhoud niet ontsleutelen of herstellen.",
+        "End-to-endversleuteling beschermt de inhoud van inventarissynchronisatie. De accountkoppeling, het IP-adres, gegevensomvang, overdrachtstijden, versienummers en een niet-geheime sleutelidentificatie blijven technisch verwerkbaar. De dienst is niet anoniem. Deze functie voegt geen inhoudsversleuteling toe aan de lokale SQLite-database of ZIP-back-ups die je exporteert. AI-analyses die je bewust aanvraagt zijn een afzonderlijke verwerking: de gekozen beelden, opnamen en teksten moeten worden verwerkt door de hier beschreven AI-diensten en vallen niet onder de synchronisatieversleuteling.",
+        "Bij QR-koppeling scant het nieuwe apparaat een tijdelijke verbindingscode op een bestaand apparaat. De QR-code bevat geen inventaris- of herstelsleutel. De app uploadt hiervoor geen camerabeeld naar de koppelserver. Na het vergelijken van de controlecijfers moet je de verbinding op het bestaande apparaat uitdrukkelijk goedkeuren. De sleutel gaat via een extra versleuteld kanaal; tijdelijke privésleutels en het QR-geheim worden niet naar de server gestuurd. Onze backend verwerkt openbare verbindingssleutels, de accountkoppeling, willekeurige identificaties, de vervaltijd en een versleutelde sleutelenvelop. De code is vijf minuten geldig en voor één verbinding. De envelop wordt verwijderd na bevestigde ontvangst of annulering. Verlopen koppelingen zijn geblokkeerd; resterende gegevens worden opgeruimd bij de volgende toegang, een nieuwe koppeling, via een daarvoor ingestelde cloudverwijderregel of bij accountverwijdering. Er wordt dus geen exact moment van fysieke verwijdering beloofd. Het verbonden apparaat bewaart de inventarissleutel in beveiligde apparaatopslag en kan daarna zonder opnieuw te scannen blijven synchroniseren.",
+        "Cloudsynchronisatie en het koppelen van extra apparaten vereisen actieve Premium+-toegang en moeten daarnaast uitdrukkelijk worden ingeschakeld. Onze backend controleert de toegang bij RevenueCat met je account-ID; alleen een AI-creditsaldo is niet voldoende. Zonder Premium+ wordt verdere cloudsynchronisatie gepauzeerd. Bestaande lokale gegevens en sleutels blijven behouden; het vervallen van Premium+ verwijdert bestaande cloudgegevens niet automatisch. Je kunt je account ook zonder Premium+ verwijderen.",
+        "Fotosynchronisatie is uitgeschakeld. Foto’s en miniaturen blijven tijdens de synchronisatie op het apparaat."
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Delen met familie",
+      "paragraphs": [
+        "Met Premium+ kun je geselecteerde dozen delen met uitgenodigde BoximoxAI-accounts. Genodigden hebben geen eigen abonnement nodig. De inhoud wordt op het apparaat versleuteld en opgeslagen in Firestore. Bevoegde ontvangers kunnen de inhoud bekijken en, afhankelijk van hun rechten, bewerken. De server verwerkt account-ID’s en e-mailadressen van beide partijen, rechten, deelstatus, tijdstippen, openbare sleutels en versleutelde sleutelenveloppen. Beide partijen kunnen elkaars e-mailadres zien. De rechtsgrond voor het gevraagde delen is artikel 6, lid 1, onder b AVG. Kopieën die ontvangers al hebben gemaakt, blijven onder hun beheer."
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Optioneel account en aanmelden",
+      "paragraphs": [
+        "Je kunt je inventaris handmatig beheren zonder aanmelding. Voor accountfuncties, vooral AI en het koppelen van aankopen aan een aangemeld account, gebruiken we Firebase Authentication van Google. Je kunt aanmelden met Google of Apple en ondersteunde aanmeldmethoden koppelen.",
+        "We verwerken het Firebase-gebruikers-ID, het verstrekte e-mailadres — eventueel een Apple-doorgifteadres —, de aanmeldprovider en noodzakelijke authenticatie- en beveiligingsgegevens. De aanmelddienst kan ook profielgegevens verwerken die de provider beschikbaar stelt. Wij ontvangen je Google- of Apple-wachtwoord niet. Sessiegegevens worden op je apparaat bewaard; onze backend controleert je authenticatietoken en gebruikers-ID.",
+        "De verwerking dient om je account te leveren en onbevoegd gebruik te voorkomen, op grond van artikel 6, lid 1, onder b en f AVG. Google en Apple verwerken daarnaast gegevens voor hun eigen accountdiensten volgens hun eigen privacyinformatie."
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Beeldherkenning, audioherkenning en AI-assistent",
+      "paragraphs": [
+        "AI-functies zijn optioneel. Bij beeldherkenning worden je gekozen of gemaakte foto, de analysemodus en de app-taal naar onze backend en daarna naar OpenAI gestuurd. Alles wat op de foto staat kan worden verwerkt. Fotografeer daarom bij voorkeur alleen de bedoelde voorwerpen.",
+        "Bij audioherkenning gaat de opname die je zelf verstuurt via onze backend naar Deepgram voor transcriptie. OpenAI analyseert daarna de tekst. Verzoeken aan de assistent kunnen ook je bericht, een beperkte gespreksgeschiedenis, kamer- en categorienamen en de benodigde sessie- of conceptcontext bevatten. Gegevens die je in berichten of concepten zet, kunnen dus ook worden verzonden. Je volledige inventarisdatabase wordt niet standaard geüpload.",
+        "OpenAI verwerkt gekozen beelden en teksten. API-inhoud wordt standaard niet voor modeltraining gebruikt; bewaring voor beveiliging blijft mogelijk. Onze backend gebruikt store=false voor OpenAI en stuurt mip_opt_out=true naar Deepgram om deze verzoeken uit te sluiten van het modelverbeteringsprogramma. Dat garandeert niet dat aanbieders helemaal geen technische verwerking of bewaring uitvoeren.",
+        "De analyse levert de functie die je aanvraagt, op grond van artikel 6, lid 1, onder b AVG. Als voor een verwerking afzonderlijke toestemming nodig is en die wordt verkregen, geldt onderdeel a. Een apparaatmachtiging is op zichzelf geen algemene toestemming voor iedere gegevensoverdracht.",
+        "AI-voorstellen kunnen fouten bevatten. Controleer het voorbeeld voordat je gegevens overneemt. We nemen geen uitsluitend geautomatiseerde beslissingen over je met rechtsgevolgen of vergelijkbare aanzienlijke gevolgen. Onder ‘Bewaartermijnen’ lees je over tijdelijke opslag van analyseresultaten."
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Camera, microfoon, foto's en dicteren",
+      "paragraphs": [
+        "De camera wordt gebruikt om QR-codes te scannen en foto's te maken die je zelf start. De microfoon is bedoeld voor opnamen en dicteren. De fotokiezer geeft toegang tot de beelden die je selecteert. We vragen geen toegang tot contacten of een machtiging voor GPS-locatie.",
+        "Kort dicteren in formulieren gebruikt de spraakherkenningsdienst van je apparaat. Afhankelijk van apparaat, taal en instellingen kan die dienst audio naar Apple, Google of de ingestelde aanbieder sturen. Uitsluitend lokale herkenning wordt niet gegarandeerd. Dit is een andere functie dan AI-audioanalyse via Deepgram en OpenAI.",
+        "Je kunt machtigingen wijzigen of intrekken in de systeeminstellingen. De betreffende functie kan dan niet meer beschikbaar zijn. De technische machtiging en de juridische grondslag voor verwerking zijn verschillende zaken."
+      ]
+    },
+    {
+      "id": "purchases",
+      "title": "Premium, aankopen en AI-credits",
+      "paragraphs": [
+        "Aankopen verlopen via Apple App Store of Google Play. We gebruiken RevenueCat om aankopen te controleren en te herstellen, functies vrij te schakelen en AI-credits te beheren. Daarbij worden product- en transactiegegevens, aankoopgeschiedenis, toegangsrechten, saldi en een RevenueCat-ID verwerkt. Zonder aanmelding kan dit een door de SDK gemaakt ID zijn; na aanmelding wordt het Firebase-gebruikers-ID gebruikt om aankopen aan je account te koppelen.",
+        "De appstores en RevenueCat verwerken ook de technische gegevens die voor hun diensten nodig zijn. Aankoopgegevens kunnen worden gebruikt voor aankoopstatistieken en beheer in het RevenueCat-dashboard. De onderzochte app verstuurt geen e-mailadres als extra klantkenmerk naar RevenueCat. Betaaldiensten verwerken betaalgegevens, zoals volledige kaartgegevens; die staan niet in onze inventarisdatabase.",
+        "De grondslagen zijn artikel 6, lid 1, onder b AVG voor aankoop en toegang, onder c voor wettelijke verplichtingen en onder f voor misbruikpreventie en betrouwbare afrekening. Je appaccount verwijderen zegt een eventueel appstore-abonnement niet automatisch op."
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Feedback en contact",
+      "paragraphs": [
+        "Als je een idee of foutmelding verstuurt, ontvangt onze backend de tekst, gekozen taal, soort melding en een willekeurig referentienummer. De ontvangst wordt met een tijdstip opgeslagen. Aanmelden is niet nodig. Je inventaris, foto's, audio en accountmailadres worden niet automatisch meegestuurd.",
+        "Als je ons mailt, verwerken we je afzenderadres, bericht en eventuele bijlagen. Stuur geen wachtwoorden, volledige betaalgegevens of onnodige gevoelige informatie. We gebruiken deze gegevens om je vraag te behandelen en de dienst te verbeteren of fouten op te lossen: artikel 6, lid 1, onder b AVG bij contractuele vragen, anders onder f vanwege ons belang bij ondersteuning en een betrouwbare dienst."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Backend, beveiliging en technische gebruiksgegevens",
+      "paragraphs": [
+        "Bij een verbinding ontvangen onze backend en infrastructuuraanbieders noodzakelijkerwijs je IP-adres en verbindingsgegevens. Beveiliging, aanvraaglimieten, quota en creditafrekening vereisen ook aanvraag-ID's, tijdstippen, verwerkingsstatus, gebruikersverwijzingen en tellers. Delen van deze systemen gebruiken HMAC-pseudoniemen voor IP-adressen en gebruikers-ID's; afzonderlijke credittransacties bevatten ook het Firebase-gebruikers-ID. Gepseudonimiseerde gegevens zijn niet automatisch anoniem.",
+        "Technische kostenregistraties kunnen provider- en aanvraag-ID's, model, tokenaantallen, audioduur, status en geschatte kosten bevatten. Gebruiks- en creditgegevens worden in Firestore verwerkt; technische registraties kunnen afhankelijk van de configuratie in Firestore of operationele logs staan. Gewone kostenregistraties bevatten geen beeldbestanden, audio-opnamen of volledige berichten.",
+        "We gebruiken deze gegevens voor veiligheid, stabiele werking en correcte afrekening, op grond van artikel 6, lid 1, onder b en f AVG en waar nodig onder c. De onderzochte app bevat geen advertentienetwerk, dienstoverschrijdende advertentietracking, Firebase Analytics of Crashlytics. Aankoopstatistieken zijn een afzonderlijke activiteit.",
+        "Backendhosting: [[backend_hosting]]. Opslagregio van Firestore: [[firestore_region]].",
+        "[[storage_region]]."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Bewaartermijnen",
+      "paragraphs": [
+        "Je lokale inventaris blijft normaal bewaard totdat je die verwijdert, via een import vervangt of appgegevens worden gewist. Zelfgemaakte exports en back-ups moet je apart op hun opslagplek verwijderen. Vóór herstel maakt de app een lokale kopie van de eerdere inventaris; ook daarin kunnen persoonsgegevens blijven staan.",
+        "AI-gesprekken, concepten en verzonden audio kunnen tijdens een sessie tijdelijk in de lokale database staan. De app is ontworpen om deze sessiegegevens bij het beëindigen van de sessie of de volgende opening van de database te verwijderen. Inventaris die je uitdrukkelijk vanuit een voorbeeld opslaat, blijft apart bewaard.",
+        "Bij AI-analyses bewaart onze backend de daarvoor verzonden oorspronkelijke beelden en opnamen niet als permanent media-archief. Dit staat los van de versleutelde foto-opslag voor optionele apparaatsynchronisatie. Geslaagde AI-antwoorden worden wel tijdelijk in Firestore opgeslagen voor betrouwbare creditafrekening. Ze kunnen transcripties en herkende inhoud bevatten. De bedoelde vervaltijd is 24 uur na succes. Een actief opruimproces verwijdert verlopen resultaten; onderbrekingen kunnen dit vertragen. Afrekenings- en aanvraagmetadata kunnen daarna blijven bestaan.",
+        "Feedback en contactverzoeken: [[feedback_retention]]. Technische logs en gebruiksgegevens: [[technical_retention]]. Account-, aankoop- en afrekeningsgegevens: [[billing_retention]]. Wettelijk verplichte bewijsstukken kunnen langer worden bewaard; overbodige inhoud wordt waar mogelijk gescheiden of de toegang beperkt. De eigen bewaartermijnen van externe aanbieders staan ook in hun informatie.",
+        "De versleutelde cloudinventaris wordt bewaard om synchronisatie te leveren. Uitschakelen of uitloggen verwijdert deze niet. Wijzigingen en verwijderingen worden bij de volgende geslaagde synchronisatie overgedragen. Vóór conflictoplossing wordt een lokale herstelkopie opgeslagen; de laatste wordt bij de volgende oplossing vervangen. Sleutels blijven in beveiligde apparaatopslag tot ze worden verwijderd; gedrag na de-installatie hangt af van het besturingssysteem."
+      ]
+    },
+    {
+      "id": "transfers",
+      "title": "Ontvangers en doorgifte buiten de EER",
+      "paragraphs": [
+        "Afhankelijk van de gebruikte functies ontvangen onze hostingaanbieder, Google/Firebase, Apple, RevenueCat, OpenAI en Deepgram de gegevens die voor hun taak nodig zijn. Dat geldt ook voor door jou gekozen back-up-, mail-, deel- en afdrukdiensten. We verkopen je inventarisinhoud niet en gebruiken die niet voor gepersonaliseerde advertenties.",
+        "De toepasselijke verwerkingsvoorwaarden van Google hangen af van de dienst. Voor Cloud Firestore verwijst Google naar zijn Cloud Data Processing Addendum. Het gepubliceerde Data Processing Addendum van OpenAI maakt deel uit van de OpenAI Services Agreement. RevenueCat neemt EU-modelcontractbepalingen op via zijn Data Processing Addendum wanneer dit op de klantovereenkomst van toepassing is. Deepgram verwijst voor klantgegevens naar klantovereenkomsten met zulke bepalingen.",
+        "Internationale aanbieders kunnen gegevens buiten de Europese Economische Ruimte verwerken, met name in de Verenigde Staten. Een Europese Firestore-regio betekent op zichzelf niet dat alle diensten uitsluitend in Europa verwerken. De voor deze dienst bevestigde waarborgen en doorgiftemechanismen zijn: [[transfer_safeguards]]. Je kunt meer informatie en waar van toepassing een kopie van de waarborgen opvragen bij ons privacycontact."
+      ]
+    },
+    {
+      "id": "delete-account",
+      "title": "Verwijdering van je account en persoonsgegevens aanvragen",
+      "paragraphs": [
+        "Ga in de app naar Instellingen → Account → Account verwijderen om je aanmeldaccount te verwijderen. Voor de veiligheid kan opnieuw aanmelden nodig zijn. Bij Apple-aanmelding wordt de beschikbare procedure voor het intrekken van de toestemming voor aanmelden gebruikt. Je Google- of Apple-account zelf wordt niet verwijderd.",
+        "Voordat het Firebase-inlogaccount wordt verwijderd, vraagt de app om verwijdering van de cloudinventaris en de bijbehorende foto’s. Daarvoor is geen ontsleutelingssleutel nodig. Als het opruimen mislukt, geldt het proces niet als voltooid en kan het opnieuw worden geprobeerd. Een gepseudonimiseerde technische verwijdermarkering blijft bestaan om te voorkomen dat vertraagde overdrachten verwijderde cloudgegevens opnieuw aanmaken. Dit verwijdert niet automatisch alle krediet-, RevenueCat-, feedback- of wettelijk verplichte gegevens. Wil je andere persoonsgegevens laten verwijderen of heb je geen toegang meer tot de app, mail dan het onderstaande privacycontact. Vermeld “BoximoxAI” en, indien bekend, je accountmailadres of gebruikers-ID. Je hoeft geen nieuw account aan te maken. We vragen geen wachtwoorden en controleren je identiteit alleen voor zover nodig.",
+        "Bij verwijdering van je account worden ook delingen verwijderd waarbij je eigenaar of genodigde bent.",
+        "We behandelen verwijderverzoeken volgens de toepasselijke wet. Als bepaalde gegevens nodig blijven voor een wettelijke verplichting of een concrete rechtsvordering, leggen we uit welke gegevens en waarom. Verwijdering uit onze systemen wist geen bestanden die je zelf exporteerde of kopieën bij andere diensten. Lokale inventarisregels kun je in de app verwijderen; het besturingssysteem biedt ook mogelijkheden om alle lokale appgegevens te wissen."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Je rechten en vrijwillige gegevens",
+      "paragraphs": [
+        "Waar de AVG geldt en aan de voorwaarden is voldaan, kun je inzage, correctie, verwijdering, beperking en overdraagbaarheid vragen. Je kunt wegens je bijzondere situatie bezwaar maken tegen verwerking op grond van gerechtvaardigde belangen. Toestemming kun je voor de toekomst intrekken zonder dat eerdere rechtmatige verwerking daardoor onrechtmatig wordt.",
+        "Je kunt een klacht indienen bij een privacytoezichthouder, vooral waar je woont of werkt of waar de vermoedelijke overtreding plaatsvond. De toezichthouder voor gegevensbescherming en vrijheid van informatie van Noordrijn-Westfalen is bevoegd voor de vestigingsplaats van de exploitant. Voor verzoeken aan ons gebruik je het onderstaande e-mailadres.",
+        "Zonder de nodige gegevens kunnen we de betreffende online functie niet leveren. Handmatig inventarisbeheer blijft normaal mogelijk zonder account of AI. Doelgroep en regels voor minderjarigen: [[audience]]. Neem contact op als je denkt dat gegevens van een kind onrechtmatig zijn verwerkt."
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Deze pagina op GitHub Pages",
+      "paragraphs": [
+        "Deze statische pagina's bevatten geen door ons toegevoegde analyse-, advertentie- of trackingscripts, geen extern geladen lettertypen en geen eigen cookies. Er is geen contactformulier; maillinks openen je mailprogramma.",
+        "Bij hosting via GitHub Pages verwerkt GitHub technische bezoekgegevens, waaronder IP-adressen voor beveiliging. Die verwerking vindt bij de hostingaanbieder plaats. We bieden deze informatiepagina aan op grond van artikel 6, lid 1, onder f AVG. Meer informatie staat in de gekoppelde privacyinformatie van GitHub."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Wijzigingen en verdere informatie",
+      "paragraphs": [
+        "We werken deze verklaring bij als functies, aanbieders of wettelijke eisen veranderen. De datum bovenaan geeft de versie aan. Belangrijke wijzigingen melden we waar nodig ook in de app. De hieronder gekoppelde informatie van aanbieders vult deze verklaring aan en vervangt onze verantwoordelijkheid voor BoximoxAI niet."
+      ]
+    }
+  ]
+}

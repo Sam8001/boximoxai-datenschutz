@@ -1,0 +1,162 @@
+{
+  "lang": "es",
+  "language": "Español",
+  "title": "Política de privacidad de BoximoxAI",
+  "intro": "Aquí te explicamos qué datos trata BoximoxAI, para qué los necesita y cómo puedes gestionarlos o solicitar su eliminación.",
+  "updated_label": "Última actualización",
+  "draft": "Borrador: los datos señalados deben confirmarse y completarse antes de publicar esta página.",
+  "pending": "Completar antes de publicar",
+  "contents": "Contenido",
+  "languages": "Idioma",
+  "contact_label": "Contacto de privacidad",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Lo esencial",
+      "paragraphs": [
+        "Tu inventario —casas u oficinas, habitaciones, cajas, objetos y fotos guardadas— se gestiona inicialmente de forma local en tu dispositivo. Las búsquedas normales y la lectura de códigos QR de BoximoxAI se realizan localmente. La sincronización de fotos está desactivada. Las fotos y miniaturas permanecen en el dispositivo durante la sincronización.",
+        "El inicio de sesión, las compras, las funciones de IA y el envío de comentarios utilizan servicios en línea. Cuando solicitas un análisis con IA, el contenido seleccionado se envía a nuestro servidor y a los proveedores de IA correspondientes. Eliminar tu cuenta no borra automáticamente el inventario local ni las copias que hayas exportado."
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Quién es responsable del tratamiento",
+      "paragraphs": [
+        "El operador identificado a continuación es el responsable del tratamiento relacionado con BoximoxAI. Puedes escribir a la dirección de correo indicada para plantear consultas de privacidad o ejercer tus derechos."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Inventario, fotos y copias en tu dispositivo",
+      "paragraphs": [
+        "Se guardan localmente los nombres de lugares y habitaciones, nombres y números de cajas, categorías, descripciones, cantidades, estados e instrucciones de manipulación, así como fotos opcionales de cajas y objetos con sus miniaturas. Los nombres como «Casa 1» son etiquetas que introduces tú; no proceden del GPS. También pueden tratarse localmente el idioma, la apariencia y el lugar seleccionado.",
+        "Estos datos permiten ofrecerte las funciones de inventario solicitadas. La base jurídica es el artículo 6.1.b del RGPD. Tú decides qué información y fotos opcionales añades. Evita incluir datos innecesarios de otras personas o información especialmente sensible.",
+        "Al exportar una copia de seguridad o un documento para imprimir, eliges el destino, el servicio de impresión o el destinatario. Las copias pueden contener inventario y fotos y no cuentan con un cifrado adicional por contraseña proporcionado por BoximoxAI. Guárdalas de forma segura. Los servicios de nube, archivos, envío o impresión que elijas aplican sus propias condiciones. Según la configuración del dispositivo, las copias de seguridad de Apple o Google también pueden incluir datos de la aplicación.",
+        "La sincronización entre dispositivos es opcional y se configura en los ajustes. Transfiere la información del inventario que introduces, incluidos nombres, descripciones, cantidades, categorías, asignaciones, instrucciones de manipulación. Se conserva una copia local para trabajar sin conexión. Las copias cifradas del inventario pasan por nuestro servidor y se almacenan en Google Cloud Firestore. Ofrecemos esta función a petición tuya conforme al artículo 6.1.b del RGPD.",
+        "La sincronización usa AES-256-GCM con valores aleatorios de un solo uso y claves separadas derivadas de una clave aleatoria de 256 bits. La clave de recuperación se guarda en el almacenamiento protegido del dispositivo y la app no la envía a nosotros ni a Firebase. Los demás dispositivos se configuran con la misma cuenta mediante una conexión QR confirmada o introduciendo la clave de recuperación. Guárdala bien: sin la clave y sin un dispositivo ya configurado, tampoco nosotros podemos descifrar ni recuperar tu contenido de la nube.",
+        "El cifrado de extremo a extremo protege el contenido de la sincronización del inventario. La vinculación con la cuenta, la dirección IP, el tamaño de los datos, los horarios de transferencia, las versiones y un identificador no secreto de la clave siguen disponibles para el procesamiento técnico. El servicio no es anónimo. Esta función no añade cifrado al contenido de la base de datos SQLite local ni a las copias ZIP que exportas. Los análisis de IA que solicitas expresamente son un proceso distinto: las imágenes, grabaciones y textos seleccionados deben ser procesados por los servicios de IA descritos aquí y no están cubiertos por el cifrado de sincronización.",
+        "Para conectar por QR, el nuevo dispositivo escanea un código temporal del dispositivo anterior. El código QR no contiene la clave del inventario ni la clave de recuperación. La app no sube una imagen de la cámara al servidor de conexión para este fin. Tras comparar los números de verificación, debes confirmar expresamente la conexión en el dispositivo anterior. La clave se transfiere mediante un canal cifrado adicional; las claves privadas temporales y el secreto del QR no se envían al servidor. Nuestro servidor procesa claves públicas de conexión, la vinculación con la cuenta, identificadores aleatorios, la caducidad y un sobre de clave cifrado. El código dura cinco minutos y sirve para una conexión. El sobre se elimina al confirmarse la recepción o al cancelar. Las conexiones caducadas quedan bloqueadas; los datos restantes se limpian en el siguiente acceso, al iniciar otra conexión, mediante una regla de borrado de la nube configurada para ello o al eliminar la cuenta. No se promete un instante exacto de borrado físico. El dispositivo conectado guarda la clave del inventario en su almacenamiento protegido y puede seguir sincronizándose sin volver a escanear.",
+        "La sincronización en la nube y la conexión de otros dispositivos requieren acceso Premium+ activo y, además, deben activarse expresamente. Nuestro backend verifica el acceso con RevenueCat mediante el identificador de tu cuenta; tener créditos de IA no es suficiente. Sin Premium+, se pausa la sincronización en la nube. Los datos y las claves locales se conservan; perder Premium+ no elimina automáticamente los datos que ya están en la nube. Puedes eliminar tu cuenta incluso sin Premium+.",
+        "La sincronización de fotos está desactivada. Las fotos y miniaturas permanecen en el dispositivo durante la sincronización."
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Compartir en familia",
+      "paragraphs": [
+        "Con Premium+ puedes compartir cajas seleccionadas con cuentas de BoximoxAI invitadas. Las personas invitadas no necesitan suscripción propia. El contenido se cifra en el dispositivo y se guarda en Firestore. Los destinatarios autorizados pueden leerlo y, según sus permisos, editarlo. Para gestionar invitaciones y acceso, el servidor trata identificadores y correos de ambas cuentas, permisos, estado, fechas, claves públicas y sobres de claves cifrados. Cada parte puede ver el correo de la otra. La base jurídica del servicio solicitado es el artículo 6.1.b del RGPD. Las copias ya realizadas por destinatarios quedan bajo su control."
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Cuenta opcional e inicio de sesión",
+      "paragraphs": [
+        "Puedes gestionar manualmente tu inventario sin iniciar sesión. Para funciones vinculadas a una cuenta, especialmente la IA y la asociación de compras a una cuenta identificada, utilizamos Firebase Authentication de Google. Puedes iniciar sesión con Google o Apple y vincular los métodos compatibles.",
+        "Se tratan el identificador de usuario de Firebase, la dirección de correo facilitada —que puede ser una dirección de retransmisión de Apple—, el proveedor de acceso y los datos necesarios para autenticación y seguridad. El servicio de acceso también puede tratar la información de perfil que facilite el proveedor. No recibimos tu contraseña de Google o Apple. Las credenciales de sesión se almacenan en el dispositivo; nuestro servidor comprueba el token de autenticación y el identificador.",
+        "El tratamiento permite ofrecer la cuenta y evitar accesos no autorizados, conforme a los artículos 6.1.b y 6.1.f del RGPD. Google y Apple tratan además datos de sus propios servicios de cuenta según sus respectivos avisos de privacidad."
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Reconocimiento de imágenes, audio y asistente de IA",
+      "paragraphs": [
+        "Las funciones de IA son opcionales. Para reconocer una imagen, se envía la foto seleccionada o capturada, junto con el modo de análisis y el idioma, a nuestro servidor y después a OpenAI. Puede analizarse todo lo visible en la imagen; procura fotografiar únicamente los objetos pertinentes.",
+        "Para reconocer audio, la grabación que decides enviar pasa por nuestro servidor a Deepgram para su transcripción. OpenAI analiza después el texto. Las solicitudes al asistente también pueden incluir tu mensaje, un historial limitado, nombres de habitaciones y categorías y el contexto de sesión o borrador necesario. Por tanto, los datos que introduzcas en mensajes o borradores también pueden transmitirse. No se carga habitualmente toda la base de datos de tu inventario.",
+        "OpenAI trata imágenes y textos seleccionados. El contenido de la API no se utiliza para entrenamiento por defecto; puede conservarse por seguridad. Nuestro servidor solicita store=false a OpenAI y envía mip_opt_out=true a Deepgram para excluir estas solicitudes de su programa de mejora de modelos. Esto no significa que los proveedores no realicen ningún tratamiento técnico ni conservación.",
+        "El análisis presta la función que has solicitado, sobre la base del artículo 6.1.b del RGPD. Si un tratamiento requiere un consentimiento separado y se obtiene, se aplica el artículo 6.1.a. Un permiso del dispositivo no equivale por sí solo a autorizar cualquier transferencia.",
+        "Las sugerencias de IA pueden contener errores. Revisa la vista previa antes de aceptar. No tomamos decisiones basadas únicamente en tratamientos automatizados que produzcan efectos jurídicos o de importancia similar sobre ti. El apartado de conservación explica el almacenamiento temporal de resultados."
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Cámara, micrófono, fotos y dictado",
+      "paragraphs": [
+        "La cámara sirve para escanear códigos QR y tomar las fotos que solicitas. El micrófono se utiliza para grabaciones y dictado. El selector de fotos permite acceder a las imágenes elegidas. No solicitamos acceso a contactos ni permiso de ubicación GPS.",
+        "El dictado breve de los formularios utiliza el servicio de reconocimiento de voz del dispositivo. Según el dispositivo, el idioma y los ajustes, este servicio puede enviar audio a Apple, Google o al proveedor configurado. No garantizamos que todo se procese exclusivamente en el dispositivo. Es una función distinta del análisis de audio con Deepgram y OpenAI.",
+        "Puedes modificar o retirar permisos en los ajustes del sistema. En ese caso, algunas funciones pueden dejar de estar disponibles. Los permisos técnicos y la base jurídica del tratamiento son cuestiones diferentes."
+      ]
+    },
+    {
+      "id": "purchases",
+      "title": "Premium, compras y créditos de IA",
+      "paragraphs": [
+        "Las compras se tramitan mediante Apple App Store o Google Play. Utilizamos RevenueCat para verificar y restaurar compras, activar funciones y gestionar créditos de IA. Se tratan datos de productos y transacciones, historial de compras, derechos de acceso, saldos y un identificador de RevenueCat. Sin iniciar sesión, puede ser un identificador generado por el SDK; tras acceder se utiliza el identificador de Firebase para asociar las compras a tu cuenta.",
+        "Las tiendas y RevenueCat también tratan los datos técnicos necesarios para sus servicios. Los datos de compra pueden usarse para estadísticas de compras y gestión en el panel de RevenueCat. El flujo revisado no envía a RevenueCat tu correo como atributo adicional de cliente. Los proveedores de pago gestionan los datos de pago, como los datos completos de tarjeta; no se guardan en nuestra base de inventario.",
+        "Se aplican los artículos 6.1.b del RGPD para compras y activación, 6.1.c para obligaciones legales y 6.1.f para prevenir usos indebidos y asegurar una facturación verificable. Eliminar la cuenta no cancela automáticamente una posible suscripción de la tienda."
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Comentarios y contacto",
+      "paragraphs": [
+        "Al enviar una idea o comunicar un error, nuestro servidor recibe el texto, el idioma, el tipo de mensaje y un identificador aleatorio. La recepción se guarda con fecha y hora. No necesitas iniciar sesión. No se adjuntan automáticamente inventario, fotos, audio ni el correo de tu cuenta.",
+        "Si nos escribes por correo, tratamos tu dirección, el mensaje y los posibles adjuntos. No envíes contraseñas, datos completos de pago ni información sensible innecesaria. Utilizamos los datos para atender tu solicitud y mejorar o reparar el servicio: artículo 6.1.b del RGPD si la consulta es contractual y, en los demás casos, 6.1.f, por nuestro interés en prestar asistencia y un servicio fiable."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Servidor, seguridad y datos técnicos de uso",
+      "paragraphs": [
+        "Al conectarte, nuestro servidor y los proveedores de infraestructura reciben necesariamente la IP y datos de conexión. Para seguridad, límites de solicitudes, cuotas y cobro de créditos se tratan también identificadores de solicitudes, fechas, estados, referencias de usuario y contadores. Parte de estos sistemas utiliza seudónimos HMAC de IP e identificadores; algunos registros de créditos incluyen también el identificador de Firebase. Los datos seudonimizados no son automáticamente anónimos.",
+        "Los eventos técnicos de costes pueden incluir identificadores de proveedor y solicitud, modelo, cantidades de tokens, duración del audio, estado y coste estimado. Los registros de uso y créditos se tratan en Firestore; los eventos técnicos pueden estar en Firestore o en registros operativos, según la configuración. Los eventos ordinarios de costes no contienen archivos de imagen, grabaciones ni mensajes completos.",
+        "La finalidad es proteger el servicio, mantenerlo estable y facturar correctamente, conforme a los artículos 6.1.b y 6.1.f del RGPD y, cuando proceda, 6.1.c. La aplicación revisada no incorpora redes publicitarias, seguimiento publicitario entre servicios, Firebase Analytics ni Crashlytics. Las estadísticas de compras son una actividad diferente.",
+        "Alojamiento del servidor: [[backend_hosting]]. Región de almacenamiento de Firestore: [[firestore_region]].",
+        "[[storage_region]]."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Plazos de conservación",
+      "paragraphs": [
+        "El inventario local permanece normalmente hasta que lo eliminas, lo sustituyes mediante una importación o se borran los datos de la aplicación. Debes eliminar por separado tus archivos exportados y copias en sus respectivos destinos. Antes de restaurar, la aplicación crea una copia local del inventario anterior, que puede seguir conteniendo datos personales.",
+        "Durante una sesión, las conversaciones de IA, borradores y audios enviados pueden guardarse temporalmente en la base local. La aplicación está diseñada para descartar estos datos al finalizar la sesión o al volver a abrir la base. El inventario que guardas expresamente desde una vista previa se conserva por separado.",
+        "En los análisis de IA, nuestro servidor no conserva las imágenes ni las grabaciones originales enviadas para ese análisis como archivo multimedia permanente. Esto es independiente del almacenamiento cifrado de fotos para la sincronización opcional. Sin embargo, las respuestas correctas de IA se guardan temporalmente en Firestore para asegurar el cobro fiable de créditos; pueden contener transcripciones y contenido reconocido. Su caducidad prevista es de 24 horas desde el resultado correcto. Un proceso de limpieza elimina los resultados caducados; las interrupciones pueden retrasarlo. Los metadatos de cobro y solicitudes pueden mantenerse después.",
+        "Comentarios y consultas: [[feedback_retention]]. Registros técnicos y de uso: [[technical_retention]]. Datos de cuenta, compras y facturación: [[billing_retention]]. Los justificantes exigidos por ley pueden conservarse más tiempo, separando contenido innecesario o restringiendo su acceso cuando sea posible. También se aplican los avisos de cada proveedor a su propia conservación.",
+        "El inventario cifrado en la nube se conserva para prestar la sincronización. Desactivarla o cerrar sesión no lo elimina. Los cambios y las eliminaciones se transfieren en la siguiente sincronización correcta. Antes de resolver un conflicto se guarda una copia local de recuperación; la última se sustituye al resolver otro conflicto. Las claves permanecen en el almacenamiento protegido hasta que se eliminan; su comportamiento al desinstalar depende del sistema operativo."
+      ]
+    },
+    {
+      "id": "transfers",
+      "title": "Destinatarios y transferencias fuera del EEE",
+      "paragraphs": [
+        "Según las funciones utilizadas, reciben los datos necesarios nuestro proveedor de alojamiento, Google/Firebase, Apple, RevenueCat, OpenAI y Deepgram, además de los servicios de copias, correo, envío o impresión que elijas. No vendemos el contenido de tu inventario ni lo utilizamos para publicidad personalizada.",
+        "Las condiciones de tratamiento de Google dependen del servicio. Para Cloud Firestore, Google remite a su anexo de tratamiento de datos de Google Cloud. El anexo de tratamiento de datos de OpenAI forma parte de su acuerdo de servicios. RevenueCat incorpora las cláusulas contractuales tipo de la UE mediante su anexo de tratamiento cuando este se aplica al contrato del cliente. Deepgram remite a acuerdos con clientes que incluyen estas cláusulas para los datos de clientes.",
+        "Los proveedores internacionales pueden tratar datos fuera del Espacio Económico Europeo, especialmente en Estados Unidos. Elegir una región europea de Firestore no implica que todos los servicios traten datos únicamente en Europa. Las garantías y mecanismos de transferencia confirmados para este servicio son: [[transfer_safeguards]]. Puedes pedir más información y, cuando corresponda, una copia de las garantías a nuestro contacto de privacidad."
+      ]
+    },
+    {
+      "id": "delete-account",
+      "title": "Solicitar la eliminación de la cuenta y los datos",
+      "paragraphs": [
+        "En la aplicación, accede a Ajustes → Cuenta → Eliminar cuenta para iniciar la eliminación de tu cuenta de acceso. Por seguridad puede exigirse que vuelvas a identificarte. En el acceso con Apple se utiliza el procedimiento disponible para revocar la autorización. Esto no elimina tu cuenta de Google o Apple.",
+        "Antes de eliminar la cuenta de acceso de Firebase, la app solicita eliminar el inventario de la nube y sus fotos. No se necesita la clave de descifrado para borrarlos. Si falla la limpieza, el proceso no se considera completado y puede repetirse. Se conserva un marcador técnico seudonimizado para impedir que transferencias retrasadas vuelvan a crear datos eliminados. Esto no elimina automáticamente todos los registros de créditos, RevenueCat, comentarios o conservación legal obligatoria. Para solicitar la eliminación de otros datos, o si ya no puedes acceder a la app, escribe al contacto de privacidad indicado abajo. Menciona «BoximoxAI» e indica el correo de la cuenta o el identificador de usuario, si lo conoces. No necesitas crear otra cuenta. No pedimos contraseñas y solo verificamos la identidad en la medida necesaria.",
+        "Al eliminar la cuenta, también se eliminan las cajas compartidas en las que tu cuenta participa como titular o invitada.",
+        "Atendemos las solicitudes según la legislación aplicable. Si debemos conservar determinados datos por obligación legal o para defender una reclamación concreta, explicaremos el alcance y el motivo. El borrado en nuestros sistemas no elimina tus exportaciones ni las copias de otros servicios. Puedes borrar entradas locales en la aplicación; el sistema operativo también permite eliminar completamente los datos locales de la aplicación."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Tus derechos y la información opcional",
+      "paragraphs": [
+        "Cuando se aplique el RGPD y se cumplan sus requisitos, puedes solicitar acceso, rectificación, supresión, limitación y portabilidad. Puedes oponerte al tratamiento basado en intereses legítimos por motivos relacionados con tu situación particular. Puedes retirar un consentimiento para el futuro sin afectar a la licitud del tratamiento anterior.",
+        "Puedes reclamar ante una autoridad de protección de datos, especialmente donde residas, trabajes o se haya producido la presunta infracción. La autoridad de protección de datos y libertad de información de Renania del Norte-Westfalia es una autoridad competente por la sede del operador. Para dirigirte a nosotros, utiliza el correo indicado abajo.",
+        "Sin los datos necesarios no podemos prestar la función en línea correspondiente. La gestión manual del inventario sigue siendo, en general, posible sin cuenta ni IA. Público destinatario y reglas para menores: [[audience]]. Ponte en contacto si crees que se han tratado indebidamente datos de un menor."
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Esta página en GitHub Pages",
+      "paragraphs": [
+        "Estas páginas estáticas no incluyen scripts de análisis, publicidad o seguimiento añadidos por nosotros, fuentes cargadas desde terceros ni cookies propias. No hay formulario de contacto; los enlaces de correo abren tu aplicación de correo.",
+        "Al alojarse en GitHub Pages, GitHub trata datos técnicos de acceso, incluidas IP por motivos de seguridad. Ese tratamiento lo realiza el proveedor de alojamiento. Ofrecemos esta página informativa sobre la base del artículo 6.1.f del RGPD. Encontrarás más información en el aviso de privacidad de GitHub enlazado abajo."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Cambios y más información",
+      "paragraphs": [
+        "Actualizamos esta política cuando cambian las funciones, los proveedores o las exigencias legales. La fecha superior identifica esta versión. Los cambios importantes se comunicarán también en la aplicación cuando sea necesario. Los avisos de los proveedores enlazados complementan esta política y no sustituyen nuestra responsabilidad por BoximoxAI."
+      ]
+    }
+  ]
+}

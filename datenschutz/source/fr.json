@@ -1,0 +1,162 @@
+{
+  "lang": "fr",
+  "language": "Français",
+  "title": "Politique de confidentialité de BoximoxAI",
+  "intro": "Cette politique explique quelles données BoximoxAI traite, pourquoi elles sont nécessaires et comment les gérer ou en demander la suppression.",
+  "updated_label": "Dernière mise à jour",
+  "draft": "Projet : les informations signalées doivent être confirmées et complétées avant publication.",
+  "pending": "À compléter avant publication",
+  "contents": "Sommaire",
+  "languages": "Langue",
+  "contact_label": "Contact pour la confidentialité",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "L'essentiel",
+      "paragraphs": [
+        "Ton inventaire — logements ou bureaux, pièces, cartons, objets et photos enregistrées — est d’abord géré localement sur ton appareil. Les recherches courantes et la lecture des codes QR BoximoxAI se font localement. La synchronisation des photos est désactivée. Les photos et miniatures restent sur l’appareil pendant la synchronisation.",
+        "La connexion au compte, les achats, les fonctions d'IA et l'envoi de commentaires utilisent des services en ligne. Quand tu demandes une analyse par IA, les contenus sélectionnés sont envoyés à notre serveur puis aux fournisseurs d'IA concernés. Supprimer ton compte n'efface pas automatiquement ton inventaire local ni les sauvegardes que tu as exportées."
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Qui est responsable du traitement ?",
+      "paragraphs": [
+        "L'exploitant identifié ci-dessous est le responsable du traitement lié à BoximoxAI. Tu peux lui écrire à l'adresse indiquée pour poser une question sur tes données ou exercer tes droits."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Inventaire, photos et sauvegardes sur ton appareil",
+      "paragraphs": [
+        "Les données locales comprennent les noms des lieux et pièces, les noms et numéros des cartons, les catégories, descriptions, quantités, statuts et consignes de manipulation, ainsi que les photos facultatives de cartons et d'objets et leurs miniatures. Les noms comme « Maison 1 » sont des libellés que tu saisis, pas des positions GPS. La langue, l'apparence et le lieu sélectionné peuvent aussi être traités localement.",
+        "Ces données permettent de fournir les fonctions d'inventaire demandées. La base légale est l'article 6, paragraphe 1, point b du RGPD. Tu décides quelles informations et photos facultatives ajouter. Évite les données inutiles sur d'autres personnes et les contenus particulièrement sensibles.",
+        "Quand tu exportes une sauvegarde ou un document à imprimer, tu choisis l'emplacement, le service d'impression ou le destinataire. Les sauvegardes peuvent contenir l'inventaire et des photos ; BoximoxAI ne leur ajoute pas de chiffrement par mot de passe. Conserve-les en sécurité. Les services de cloud, de fichiers, de partage ou d'impression choisis appliquent leurs propres conditions. Selon les réglages de l'appareil, les sauvegardes Apple ou Google peuvent aussi inclure des données de l'application.",
+        "La synchronisation entre appareils est facultative et se configure dans les réglages. Elle transfère les informations que tu saisis dans l’inventaire : noms, descriptions, quantités, catégories, associations, consignes de manipulation. Une copie locale reste disponible hors ligne. Les copies chiffrées de l’inventaire passent par notre backend et sont conservées dans Google Cloud Firestore. Cette fonction est fournie à ta demande sur le fondement de l’article 6, paragraphe 1, point b du RGPD.",
+        "La synchronisation utilise AES-256-GCM avec des nonces aléatoires et des clés distinctes dérivées d’une clé aléatoire de 256 bits. La clé de récupération est conservée dans le stockage protégé de l’appareil et l’application ne la transmet ni à nous ni à Firebase. Les autres appareils sont configurés avec le même compte, au moyen d’un appairage QR approuvé ou en saisissant la clé de récupération. Conserve-la soigneusement : sans la clé et sans appareil déjà configuré, nous ne pouvons pas non plus déchiffrer ni récupérer tes contenus cloud.",
+        "Le chiffrement de bout en bout protège le contenu de la synchronisation de l’inventaire. Le rattachement au compte, l’adresse IP, le volume des données, les horaires de transfert, les versions et un identifiant non secret de la clé restent accessibles pour le traitement technique. Le service n’est pas anonyme. Cette fonction n’ajoute pas de chiffrement au contenu de la base SQLite locale ni aux sauvegardes ZIP que tu exportes. Les analyses IA que tu demandes expressément constituent un traitement distinct : les images, enregistrements et textes choisis doivent être traités par les services IA décrits ici et ne sont pas couverts par le chiffrement de synchronisation.",
+        "Pour l’appairage QR, le nouvel appareil scanne un code temporaire affiché sur l’appareil déjà configuré. Le code QR ne contient ni la clé de l’inventaire ni la clé de récupération. L’application n’envoie pas d’image de la caméra au serveur d’appairage pour cet usage. Après comparaison des chiffres de vérification, tu dois approuver expressément la connexion sur l’appareil déjà configuré. La clé est transmise par un canal chiffré supplémentaire ; les clés privées temporaires et le secret du QR ne sont pas envoyés au serveur. Notre backend traite des clés publiques de connexion, le rattachement au compte, des identifiants aléatoires, une échéance et une enveloppe chiffrée contenant la clé. Le code est valable cinq minutes et pour une connexion. L’enveloppe est supprimée après confirmation de réception ou annulation. Les appairages expirés sont bloqués ; les données restantes sont nettoyées au prochain accès, lors d’un nouvel appairage, par une règle de suppression cloud configurée à cet effet ou à la suppression du compte. Aucun instant précis de suppression physique n’est donc promis. L’appareil connecté conserve la clé de l’inventaire dans son stockage protégé et peut continuer à se synchroniser sans nouveau scan.",
+        "La synchronisation cloud et la connexion d’autres appareils nécessitent un accès Premium+ actif et doivent également être activées explicitement. Notre backend vérifie cet accès auprès de RevenueCat à l’aide de l’identifiant de ton compte ; un solde de crédits IA ne suffit pas. Sans Premium+, la synchronisation cloud est suspendue. Les données et clés locales existantes sont conservées ; la perte de Premium+ ne supprime pas automatiquement les données déjà présentes dans le cloud. Tu peux supprimer ton compte même sans Premium+.",
+        "La synchronisation des photos est désactivée. Les photos et miniatures restent sur l’appareil pendant la synchronisation."
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Partage en famille",
+      "paragraphs": [
+        "Premium+ permet de partager des cartons sélectionnés avec des comptes BoximoxAI invités. Les invités n’ont pas besoin de leur propre abonnement. Le contenu est chiffré sur l’appareil et stocké dans Firestore. Les destinataires autorisés peuvent le consulter et, selon leurs droits, le modifier. Le serveur traite les identifiants et adresses e-mail des deux comptes, les droits, le statut du partage, les dates, les clés publiques et les enveloppes de clés chiffrées. Chaque partie peut voir l’adresse e-mail de l’autre. Le partage demandé repose sur l’article 6, paragraphe 1, point b du RGPD. Les copies déjà réalisées restent sous le contrôle de leurs destinataires."
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Compte facultatif et connexion",
+      "paragraphs": [
+        "Tu peux gérer manuellement ton inventaire sans te connecter. Pour les fonctions liées à un compte, notamment l'IA et l'association des achats à un compte connecté, nous utilisons Firebase Authentication de Google. Tu peux te connecter avec Google ou Apple et associer les méthodes compatibles.",
+        "Les données traitées comprennent l'identifiant Firebase, l'adresse email fournie — éventuellement une adresse relais Apple —, le fournisseur de connexion et les informations nécessaires à l'authentification et à la sécurité. Le service de connexion peut aussi traiter les informations de profil communiquées par le fournisseur. Nous ne recevons pas ton mot de passe Google ou Apple. Les informations de session sont conservées sur l'appareil ; notre serveur vérifie le jeton d'authentification et l'identifiant.",
+        "Ce traitement sert à fournir le compte et à prévenir les accès non autorisés, sur le fondement de l'article 6, paragraphe 1, points b et f du RGPD. Google et Apple traitent également des données pour leurs propres services de compte, selon leurs notices respectives."
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Reconnaissance d'images, d'audio et assistant IA",
+      "paragraphs": [
+        "Les fonctions d'IA sont facultatives. Pour la reconnaissance d'images, la photo sélectionnée ou prise, le mode d'analyse et la langue de l'application sont envoyés à notre serveur puis à OpenAI. Tout ce qui apparaît dans l'image peut être traité : photographie si possible uniquement les objets concernés.",
+        "Pour la reconnaissance audio, l'enregistrement que tu décides d'envoyer passe par notre serveur et Deepgram pour être transcrit. OpenAI analyse ensuite le texte. Une demande à l'assistant peut aussi comprendre ton message, un historique limité, les noms des pièces et catégories et le contexte de session ou de brouillon nécessaire. Les informations ajoutées aux messages ou brouillons peuvent donc être transmises. L'ensemble de la base de données de ton inventaire n'est pas habituellement téléversé.",
+        "OpenAI traite les images et textes sélectionnés. Les contenus API ne servent pas à l'entraînement par défaut ; une conservation de sécurité reste possible. Notre serveur utilise store=false pour OpenAI et envoie mip_opt_out=true à Deepgram pour exclure ces demandes de son programme d'amélioration des modèles. Cela ne garantit pas l'absence de tout traitement technique ou de toute conservation chez ces fournisseurs.",
+        "L'analyse fournit la fonction que tu demandes, sur le fondement de l'article 6, paragraphe 1, point b du RGPD. Lorsqu'un traitement exige un consentement distinct et que celui-ci est recueilli, le point a s'applique. Une autorisation de l'appareil ne constitue pas, à elle seule, un accord général pour tous les transferts.",
+        "Les suggestions de l'IA peuvent être inexactes. Vérifie l'aperçu avant de les accepter. Nous ne prenons pas de décisions te concernant fondées exclusivement sur un traitement automatisé et produisant des effets juridiques ou aussi importants. La rubrique « Conservation » détaille le stockage temporaire des résultats."
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Appareil photo, microphone, photos et dictée",
+      "paragraphs": [
+        "L'appareil photo sert à lire les codes QR et à prendre les photos que tu demandes. Le microphone sert aux enregistrements et à la dictée. Le sélecteur de photos donne accès aux images choisies. Nous ne demandons ni l'accès aux contacts ni une autorisation de localisation GPS.",
+        "La dictée courte dans les formulaires utilise le service de reconnaissance vocale de ton appareil. Selon l'appareil, la langue et les réglages, ce service peut transmettre l'audio à Apple, Google ou au fournisseur configuré. Une reconnaissance exclusivement locale n'est pas garantie. Cette fonction se distingue de l'analyse audio par Deepgram et OpenAI.",
+        "Tu peux modifier ou retirer les autorisations dans les réglages du système. La fonction correspondante peut alors devenir indisponible. L'autorisation technique et la base légale du traitement sont deux questions distinctes."
+      ]
+    },
+    {
+      "id": "purchases",
+      "title": "Premium, achats et crédits IA",
+      "paragraphs": [
+        "Les achats passent par Apple App Store ou Google Play. Nous utilisons RevenueCat pour les vérifier et les restaurer, activer les fonctions et gérer les crédits IA. Sont notamment traités les produits et transactions, l'historique des achats, les droits d'accès, les soldes et un identifiant RevenueCat. Sans connexion, cet identifiant peut être créé par le SDK ; après connexion, l'identifiant Firebase sert à associer les achats au compte.",
+        "Les boutiques et RevenueCat traitent aussi les informations techniques nécessaires à leurs services. Les achats peuvent être analysés pour établir des statistiques et les gérer dans le tableau de bord RevenueCat. Le parcours examiné n'envoie pas l'email à RevenueCat comme attribut client supplémentaire. Les prestataires de paiement gèrent les informations de paiement, telles que les coordonnées complètes d'une carte, pas notre base d'inventaire.",
+        "Les bases légales sont l'article 6, paragraphe 1, point b du RGPD pour les achats et l'accès, le point c pour les obligations légales et le point f pour prévenir les abus et assurer une facturation vérifiable. Supprimer le compte de l'application ne résilie pas automatiquement un éventuel abonnement dans la boutique."
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Commentaires et contact",
+      "paragraphs": [
+        "Quand tu envoies une idée ou signales un problème, notre serveur reçoit le texte, la langue, le type de message et une référence aléatoire. La réception est enregistrée avec un horodatage. Aucune connexion n'est nécessaire. L'inventaire, les photos, l'audio et l'email de ton compte ne sont pas joints automatiquement.",
+        "Si tu nous écris par email, nous traitons ton adresse, le message et les éventuelles pièces jointes. N'envoie pas de mots de passe, d'informations de paiement complètes ni de données sensibles inutiles. Nous utilisons ces données pour répondre et améliorer ou réparer le service : article 6, paragraphe 1, point b du RGPD pour les demandes contractuelles, sinon point f, au titre de notre intérêt à fournir une assistance et un service fiable."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Serveur, sécurité et données techniques d'utilisation",
+      "paragraphs": [
+        "Lors d'une connexion, notre serveur et les fournisseurs d'infrastructure reçoivent nécessairement l'adresse IP et des données de connexion. La sécurité, les limites de demandes, les quotas et le débit des crédits nécessitent aussi des identifiants d'opérations, dates, états, références utilisateur et compteurs. Certains systèmes utilisent des pseudonymes HMAC pour les IP et identifiants ; certaines opérations de crédit contiennent également l'identifiant Firebase. Une donnée pseudonymisée n'est pas automatiquement anonyme.",
+        "Les événements techniques de coût peuvent comprendre des identifiants de fournisseurs et de demandes, le modèle, les nombres de tokens, la durée audio, l'état et le coût estimé. Les données d'usage et de crédits sont traitées dans Firestore ; les événements techniques peuvent être conservés dans Firestore ou les journaux d'exploitation, selon la configuration. Les événements ordinaires de coût ne contiennent pas de fichiers image, d'enregistrements ou de messages complets.",
+        "Ces données assurent la sécurité, la stabilité et une facturation correcte, sur le fondement de l'article 6, paragraphe 1, points b et f du RGPD et, le cas échéant, point c. L'application examinée n'intègre pas de réseau publicitaire, de suivi publicitaire entre services, de Firebase Analytics ou de Crashlytics. Les statistiques d'achats sont une activité distincte.",
+        "Hébergement du serveur : [[backend_hosting]]. Région de stockage Firestore : [[firestore_region]].",
+        "[[storage_region]]."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Conservation",
+      "paragraphs": [
+        "L'inventaire local reste normalement enregistré jusqu'à sa suppression, son remplacement par un import ou l'effacement des données de l'application. Tu dois supprimer séparément les exports et sauvegardes de leurs emplacements respectifs. Avant une restauration, l'application crée une copie locale de l'inventaire précédent, qui peut continuer à contenir des données personnelles.",
+        "Pendant une session, les conversations IA, brouillons et audios envoyés peuvent être enregistrés temporairement dans la base locale. L'application est conçue pour supprimer ces données à la fin de la session ou lors de la prochaine ouverture de la base. L'inventaire que tu enregistres explicitement depuis un aperçu est conservé séparément.",
+        "Pour les analyses IA, notre backend ne conserve pas les images ou enregistrements bruts transmis pour l’analyse comme une archive multimédia permanente. Ce traitement est distinct du stockage chiffré des photos pour la synchronisation facultative. Les réponses IA réussies sont toutefois mises temporairement en cache dans Firestore pour fiabiliser le débit des crédits ; elles peuvent contenir des transcriptions et des contenus reconnus. Leur expiration prévue intervient 24 heures après le succès. Un processus de nettoyage en cours d'exécution supprime les résultats expirés ; une interruption peut retarder cette suppression. Les métadonnées d'opérations et de facturation peuvent subsister.",
+        "Commentaires et demandes de contact : [[feedback_retention]]. Journaux techniques et données d'usage : [[technical_retention]]. Données de compte, d'achat et de facturation : [[billing_retention]]. Les justificatifs imposés par la loi peuvent être conservés plus longtemps, en séparant les contenus inutiles ou en limitant leur accès lorsque c'est possible. Les notices des prestataires précisent également leurs propres conservations.",
+        "L’inventaire cloud chiffré est conservé pour fournir la synchronisation. La désactiver ou se déconnecter ne le supprime pas. Les modifications et suppressions sont transférées lors de la prochaine synchronisation réussie. Une copie locale de récupération est enregistrée avant de résoudre un conflit ; la dernière est remplacée lors de la résolution suivante. Les clés restent dans le stockage protégé jusqu’à leur retrait ; leur devenir après désinstallation dépend du système d’exploitation."
+      ]
+    },
+    {
+      "id": "transfers",
+      "title": "Destinataires et transferts hors de l'EEE",
+      "paragraphs": [
+        "Selon les fonctions utilisées, les données nécessaires sont reçues par notre hébergeur, Google/Firebase, Apple, RevenueCat, OpenAI et Deepgram, ainsi que par les services de sauvegarde, email, partage ou impression que tu choisis. Nous ne vendons pas le contenu de ton inventaire et ne l'utilisons pas à des fins de publicité personnalisée.",
+        "Les conditions de traitement de Google dépendent du service. Pour Cloud Firestore, Google renvoie à son avenant de traitement des données Google Cloud. L’avenant de traitement des données publié par OpenAI fait partie de son contrat de services. RevenueCat intègre les clauses contractuelles types de l’UE dans son avenant de traitement lorsqu’il s’applique au contrat du client. Deepgram renvoie à des accords clients incluant ces clauses pour les données des clients.",
+        "Les fournisseurs internationaux peuvent traiter des données hors de l'Espace économique européen, notamment aux États-Unis. Une région Firestore européenne ne signifie pas que tous les services traitent uniquement en Europe. Les garanties et mécanismes de transfert confirmés pour ce service sont : [[transfer_safeguards]]. Tu peux demander des précisions et, le cas échéant, une copie des garanties à notre contact pour la confidentialité."
+      ]
+    },
+    {
+      "id": "delete-account",
+      "title": "Demander la suppression du compte et des données",
+      "paragraphs": [
+        "Dans l'application, ouvre Réglages → Compte → Supprimer le compte pour lancer la suppression de ton compte de connexion. Une nouvelle authentification peut être demandée pour des raisons de sécurité. Avec Apple, le processus disponible de révocation de l'autorisation est utilisé. Ton compte Google ou Apple lui-même n'est pas supprimé.",
+        "Avant de supprimer le compte de connexion Firebase, l’application demande la suppression de l’inventaire cloud et de ses photos. La clé de déchiffrement n’est pas nécessaire pour les supprimer. Si le nettoyage échoue, la procédure n’est pas considérée comme terminée et peut être répétée. Un marqueur technique pseudonymisé demeure pour empêcher des transferts retardés de recréer des données supprimées. Cela ne retire pas automatiquement tous les enregistrements de crédits, RevenueCat, commentaires ou soumis à une obligation légale. Pour demander la suppression d’autres données, ou si tu n’as plus accès à l’application, écris au contact indiqué ci-dessous. Mentionne « BoximoxAI » et l’email du compte ou l’identifiant utilisateur, si connu. Aucun nouveau compte n’est nécessaire. Nous ne demandons pas de mot de passe et vérifions l’identité uniquement dans la mesure nécessaire.",
+        "La suppression du compte retire aussi les partages auxquels ton compte participe comme propriétaire ou invité.",
+        "Nous traitons les demandes conformément au droit applicable. Si certaines données doivent être conservées pour une obligation légale ou la défense d'une demande concrète, nous en expliquons la portée et la raison. La suppression dans nos systèmes n'efface pas tes exports ou les copies détenues par d'autres services. Tu peux supprimer les entrées locales dans l'application ; le système d'exploitation permet également d'effacer complètement les données locales de l'application."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Tes droits et les informations facultatives",
+      "paragraphs": [
+        "Lorsque le RGPD s'applique et que ses conditions sont réunies, tu peux demander l'accès, la rectification, l'effacement, la limitation et la portabilité. Tu peux t'opposer à un traitement fondé sur des intérêts légitimes pour des motifs liés à ta situation particulière. Un consentement peut être retiré pour l'avenir sans remettre en cause la licéité du traitement antérieur.",
+        "Tu peux adresser une réclamation à une autorité de protection des données, notamment dans ton pays de résidence, ton lieu de travail ou le lieu de la violation présumée. L'autorité de protection des données et de liberté d'information de Rhénanie-du-Nord-Westphalie est compétente au regard du siège de l'exploitant. Pour nous contacter, utilise l'email indiqué ci-dessous.",
+        "Une fonction en ligne ne peut pas être fournie sans les informations nécessaires. La gestion manuelle de l'inventaire reste normalement possible sans compte ni IA. Public visé et règles applicables aux mineurs : [[audience]]. Contacte-nous si tu penses que les données d'un enfant ont été traitées illicitement."
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Cette page sur GitHub Pages",
+      "paragraphs": [
+        "Ces pages statiques n'intègrent aucun script d'analyse, de publicité ou de suivi ajouté par nous, aucune police chargée à distance et aucun cookie défini par nous. Il n'y a pas de formulaire ; les liens email ouvrent ta messagerie.",
+        "Lors d'un hébergement sur GitHub Pages, GitHub traite des données techniques d'accès, notamment les IP à des fins de sécurité. Ce traitement relève de l'hébergeur. Nous proposons cette page d'information sur le fondement de l'article 6, paragraphe 1, point f du RGPD. Consulte les informations GitHub liées ci-dessous pour en savoir plus."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Modifications et informations complémentaires",
+      "paragraphs": [
+        "Nous actualisons cette politique lorsque les fonctions, les prestataires ou les exigences légales changent. La date ci-dessus identifie cette version. Si nécessaire, les changements importants sont aussi communiqués dans l'application. Les informations des fournisseurs liées ci-dessous complètent cette politique sans remplacer notre responsabilité pour BoximoxAI."
+      ]
+    }
+  ]
+}

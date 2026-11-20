@@ -1,0 +1,162 @@
+{
+  "lang": "en",
+  "language": "English",
+  "title": "BoximoxAI Privacy Policy",
+  "intro": "This policy explains what information BoximoxAI processes, why it is needed, and how you can manage it or request its deletion.",
+  "updated_label": "Last updated",
+  "draft": "Draft: the highlighted details must be confirmed and completed before publication.",
+  "pending": "Complete before publication",
+  "contents": "Contents",
+  "languages": "Language",
+  "contact_label": "Privacy contact",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "The essentials",
+      "paragraphs": [
+        "Your inventory—homes or offices, rooms, boxes, items and saved photos—is initially managed locally on your device. Ordinary inventory searches and reading BoximoxAI QR codes happen locally. Photo sync is disabled. Photos and thumbnails stay on your device during device sync.",
+        "Signing in, purchases, AI features and sending feedback require online services. When you request an AI analysis, the selected content is sent to our backend and the relevant AI providers. Deleting your account does not automatically delete your local inventory or backups you have exported."
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Who is responsible for your information",
+      "paragraphs": [
+        "The operator identified below is the controller responsible for processing in connection with BoximoxAI. You can contact us at the email address below with privacy questions or to exercise your rights."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Inventory, photos and backups on your device",
+      "paragraphs": [
+        "Local records include location and room names, box names and numbers, categories, descriptions, quantities, status and handling instructions, and optional box and item photos with thumbnails. Names such as “Home 1” are labels you enter, not GPS locations. The app may also process your language, appearance preference and selected location locally.",
+        "These records allow us to provide the inventory features you request. The legal basis is Article 6(1)(b) GDPR. You choose which optional details and photos to add. Avoid unnecessary information about other people or particularly sensitive content.",
+        "When you export a backup or printable document, you choose where to save it, which print service to use or whom to share it with. Backups can contain your inventory and photos and do not have additional password encryption provided by BoximoxAI. Keep them secure. Cloud, file, sharing and printing services you choose process information under their own terms. Depending on your device settings, Apple or Google device-backup services may also include app data.",
+        "Device synchronization is optional and must be set up in settings. It transfers the inventory information you enter, including names, descriptions, quantities, categories, relationships, handling instructions. A local copy remains available for offline use. Encrypted inventory snapshots pass through our backend and are stored in Google Cloud Firestore. We provide this feature at your request under Article 6(1)(b) GDPR.",
+        "Synchronization uses AES-256-GCM with random nonces and separate keys derived from a random 256-bit key. The recovery key is kept in your device’s protected key storage and is not sent by the app to us or Firebase. Other devices are set up with the same account through an approved QR pairing or by entering the recovery key. Keep it safe: without the key and without a device that is already set up, we cannot decrypt or recover your cloud content either.",
+        "End-to-end encryption protects the content of inventory synchronization. Account associations, IP addresses, data sizes, transfer times, version numbers and a non-secret key identifier remain available for technical processing. The service is not anonymous. This sync feature does not add content encryption to the local SQLite database or ZIP backups you export. AI analyses you explicitly request are separate: the selected images, recordings and text need to be processed by the AI services described in this policy and are not covered by sync encryption.",
+        "For QR pairing, the new device scans a short-lived connection code on an existing device. The QR code does not contain the inventory or recovery key. The app does not upload a camera image to the pairing server for this purpose. After comparing the displayed verification numbers, you must explicitly approve the connection on the existing device. The key is transferred through an additional encrypted channel; temporary private keys and the QR secret are not sent to the server. Our backend processes public connection keys, an account association, random identifiers, an expiry time and an encrypted key envelope. The code is valid for five minutes and one connection. The envelope is removed after acknowledged receipt or cancellation. Expired pairings cannot be used; remaining data is cleaned up on the next access, a new pairing, a suitably configured cloud deletion policy or account deletion. Physical deletion is therefore not promised at an exact second. The connected device keeps the inventory key in protected device storage and can continue synchronizing without scanning again.",
+        "Cloud sync and connecting additional devices require active Premium+ access and must also be explicitly enabled. Our backend checks access with RevenueCat using your account identifier; an AI credit balance alone does not qualify. Without Premium+, further cloud sync is paused. Existing local data and keys are retained; losing Premium+ does not automatically delete existing cloud data. Account deletion remains available without Premium+.",
+        "Photo sync is disabled. Photos and thumbnails stay on your device during device sync."
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Family sharing",
+      "paragraphs": [
+        "With Premium+ you can share selected boxes with invited BoximoxAI accounts. Invitees do not need their own subscription. Shared content is encrypted on the device and stored in Firestore. Authorized recipients can view it and, if permitted, edit it. To handle invitations and access, the backend processes both parties’ account IDs and email addresses, permissions, sharing status, timestamps, public keys and encrypted key envelopes. Each party can see the other’s email address. The legal basis for providing the requested sharing is Article 6(1)(b) GDPR. Copies recipients have already made remain under their control."
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Optional account and sign-in",
+      "paragraphs": [
+        "You can manage your inventory manually without signing in. We use Google Firebase Authentication for account-based features, particularly AI and linking purchases to a signed-in account. You can sign in with Google or Apple and link supported sign-in methods.",
+        "Information processed includes your Firebase user ID, the email address provided—which may be an Apple relay address—your sign-in provider, and necessary authentication and security information. The sign-in service may also process profile information released by your provider. We do not receive your Google or Apple password. Session credentials are stored on your device; our backend verifies your authentication token and user ID.",
+        "We process this information to provide your account and prevent unauthorised use, under Articles 6(1)(b) and 6(1)(f) GDPR. Google and Apple also process information for their own account services under their respective privacy notices."
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Image recognition, audio recognition and the AI assistant",
+      "paragraphs": [
+        "AI features are optional. For image recognition, your chosen or captured image, the analysis mode and app language are sent to our backend and then to OpenAI. Anything visible in the image may be processed, so aim to photograph only the relevant objects.",
+        "For audio recognition, the recording you choose to send goes through our backend to Deepgram for transcription. OpenAI then analyses the transcript. Assistant requests may also include your message, limited conversation history, room and category names, and the session or draft context needed for your request. Information you put in a message or draft may therefore be transmitted too. Your entire inventory database is not routinely uploaded.",
+        "OpenAI processes selected images and text. API content is not used for model training by default; providers may retain data for security. Our backend requests store=false from OpenAI and sends mip_opt_out=true to Deepgram to opt these requests out of its model improvement programme. These settings do not mean that providers perform no technical processing or retention.",
+        "Analysis provides the feature you requested, under Article 6(1)(b) GDPR. Where a particular processing activity requires separate consent and that consent is obtained, Article 6(1)(a) applies. A device permission alone is not blanket consent for every data transfer.",
+        "AI suggestions can be wrong. Review the preview before accepting information. We do not make solely automated decisions about you that have legal or similarly significant effects. See “Retention” for temporary storage of analysis results."
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Camera, microphone, photos and dictation",
+      "paragraphs": [
+        "The camera is used for QR scanning and photos you initiate. The microphone is used for recordings and dictation. The photo picker gives access to images you select. We do not request access to your contacts or GPS location.",
+        "Short dictation in form fields uses your device’s speech-recognition service. Depending on your device, language and settings, that service may send audio to Apple, Google or the configured recognition provider. We do not promise exclusively on-device recognition. This is separate from AI audio analysis using Deepgram and OpenAI.",
+        "You can change or withdraw device permissions in your system settings. The relevant feature may then become unavailable. Technical permissions and the legal basis for processing are separate matters."
+      ]
+    },
+    {
+      "id": "purchases",
+      "title": "Premium, purchases and AI credits",
+      "paragraphs": [
+        "Purchases are processed by Apple App Store or Google Play. We use RevenueCat to verify and restore purchases, unlock features and manage AI credits. This involves product and transaction information, purchase history, entitlements, balances and a RevenueCat identifier. Without sign-in, this may be an SDK-generated identifier; after sign-in, the Firebase user ID is used to associate purchases with your account.",
+        "The stores and RevenueCat also process the technical information needed for their services. Purchase data may be analysed for purchase statistics and RevenueCat dashboard administration. The reviewed app flow does not send an email address to RevenueCat as an additional customer attribute. Payment services handle payment details such as full card information, not our inventory database.",
+        "The legal bases are Article 6(1)(b) GDPR for purchases and access, Article 6(1)(c) for legal duties, and Article 6(1)(f) for preventing misuse and maintaining reliable billing. Deleting your app account does not automatically cancel any store subscription."
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Feedback and contacting us",
+      "paragraphs": [
+        "When you submit an idea or bug report, our backend receives your message, selected language, report type and a random reference ID. The submission is stored with a timestamp. Sign-in is not required. Feedback does not automatically include your inventory, photos, audio or account email address.",
+        "If you contact us by email, we process your sender address, message and any attachments. Do not send passwords, full payment details or unnecessary sensitive information. We use this information to address your request and improve or repair the service: Article 6(1)(b) GDPR for contract-related requests, otherwise Article 6(1)(f), based on our interest in providing support and a reliable service."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Backend, security and technical usage information",
+      "paragraphs": [
+        "When you connect, our backend and infrastructure providers necessarily receive information such as your IP address and connection details. Security, request limits, quotas and credit billing also involve request IDs, timestamps, processing status, user references and usage counters. Parts of these systems use HMAC-derived pseudonyms for IP addresses and user IDs; individual credit records also contain the Firebase user ID. Pseudonymised information is not automatically anonymous.",
+        "Technical cost events can include provider and request IDs, model, token counts, audio duration, status and estimated cost. Usage and credit records are processed in Firestore; technical events can be held in Firestore or operational logs, depending on configuration. Regular cost events do not contain image files, audio recordings or full messages.",
+        "We use this information for security, reliable operation and correct billing, under Articles 6(1)(b) and 6(1)(f) GDPR and, where applicable, Article 6(1)(c). The reviewed app contains no advertising network, cross-service advertising tracking, Firebase Analytics or Crashlytics integration. Purchase statistics are a separate activity.",
+        "Backend hosting: [[backend_hosting]]. Firestore storage region: [[firestore_region]].",
+        "[[storage_region]]."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Retention",
+      "paragraphs": [
+        "Local inventory normally remains until you delete it, replace it through an import, or remove the app’s data. You must delete your own exports and backups separately from their respective storage locations. Before restoring a backup, the app creates a local copy of the previous inventory; this can also continue to contain personal information.",
+        "AI conversations, drafts and sent audio may be stored temporarily in the local app database during a session. The app is designed to discard session data when the session ends or when the database next opens. Inventory you explicitly save from a preview is retained separately.",
+        "For AI analysis, our backend does not keep the raw images or recordings sent for that analysis as a permanent media archive. This is separate from encrypted photo storage for optional device synchronization. Successful AI responses are nevertheless cached temporarily in Firestore to support reliable credit billing; they can contain transcripts and recognised content. Their intended expiry is 24 hours after success. A running cleanup process removes expired results, so interruptions can delay removal. Billing and request metadata can remain afterwards.",
+        "Feedback and contact requests: [[feedback_retention]]. Technical logs and usage records: [[technical_retention]]. Account, purchase and billing records: [[billing_retention]]. Records required by law may be retained longer; unnecessary content is separated or access restricted where possible. External providers’ notices also apply to their own retention.",
+        "Encrypted cloud inventory is retained to provide synchronization. Turning sync off or signing out does not delete it. Changes and deletions are transferred at the next successful sync. Before resolving a conflict, the app saves a local recovery copy; the latest copy is replaced when another conflict is resolved. Keys remain in protected device storage until removed; what happens on uninstall depends on the operating system."
+      ]
+    },
+    {
+      "id": "transfers",
+      "title": "Recipients and transfers outside the EEA",
+      "paragraphs": [
+        "Depending on the features you use, our hosting provider, Google/Firebase, Apple, RevenueCat, OpenAI and Deepgram receive the information needed for their role. Other recipients include backup, email, sharing and printing services you choose. We do not sell your inventory content or use it for personalised advertising.",
+        "Google’s applicable data processing terms depend on the service. For Cloud Firestore, Google refers to its Cloud Data Processing Addendum. The published OpenAI Data Processing Addendum forms part of the OpenAI Services Agreement. RevenueCat incorporates EU Standard Contractual Clauses through its Data Processing Addendum where it applies to the customer agreement. Deepgram refers to customer agreements with EU Standard Contractual Clauses for customer data.",
+        "International providers may process information outside the European Economic Area, particularly in the United States. A European Firestore region alone does not mean every service processes information exclusively in Europe. The safeguards and transfer mechanisms confirmed for this deployment are: [[transfer_safeguards]]. You can request further information and, where applicable, a copy of relevant safeguards from our privacy contact."
+      ]
+    },
+    {
+      "id": "delete-account",
+      "title": "Request account and personal data deletion",
+      "paragraphs": [
+        "In the app, go to Settings → Account → Delete account to start deleting your sign-in account. You may need to sign in again for security. For Apple sign-in, the available authorisation-revocation process is used. This does not delete your Google or Apple account itself.",
+        "Before deleting the Firebase sign-in account, the app requests deletion of the cloud inventory and its cloud photos. No decryption key is required for deletion. If cleanup fails, the deletion flow is not treated as complete and can be retried. A pseudonymised technical deletion marker remains to prevent delayed device transfers from recreating deleted cloud data. This does not automatically remove every credit, RevenueCat, feedback or legally required record. To request deletion of further personal data, or if you can no longer access the app, email the privacy contact below. Mention “BoximoxAI” and provide your account email or user ID if known. You do not need to create a new account. We do not ask for passwords and verify identity only as necessary.",
+        "Account deletion also removes family shares in which your account is the owner or invitee.",
+        "We handle deletion requests under applicable law. If specific information must be kept to meet legal duties or defend a concrete claim, we explain the scope and reason. Deleting information from our systems does not remove files you exported or copies held by other services. You can delete local inventory entries in the app; your operating system also provides ways to remove local app data completely."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Your rights and optional information",
+      "paragraphs": [
+        "Where the GDPR applies and its conditions are met, you can request access, correction, erasure, restriction and data portability. You can object to processing based on legitimate interests on grounds relating to your particular situation. You can withdraw consent prospectively without affecting the lawfulness of earlier processing.",
+        "You can complain to a data-protection authority, particularly where you live or work or where an alleged infringement occurred. The State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia is a relevant authority for the operator’s location. To contact us, use the email address below.",
+        "An online feature cannot be provided without the information it needs. Manual inventory management normally remains available without an account or AI. Intended audience and rules for minors: [[audience]]. Contact us if you believe a child’s information has been processed unlawfully."
+      ]
+    },
+    {
+      "id": "website",
+      "title": "This privacy website on GitHub Pages",
+      "paragraphs": [
+        "These static pages contain no analytics, advertising or tracking scripts added by us, no remotely loaded fonts and no cookies set by us. There is no contact form; email links open your email application.",
+        "When these pages are hosted on GitHub Pages, GitHub processes technical access information, including IP addresses for security. This processing takes place at the hosting provider. We provide this information page under Article 6(1)(f) GDPR. See the linked GitHub privacy information for further details."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Changes and further information",
+      "paragraphs": [
+        "We update this policy when features, service providers or legal requirements change. The date above identifies this version. Where required, material changes will also be communicated in the app. The provider information linked below supplements this policy and does not replace our responsibility for BoximoxAI."
+      ]
+    }
+  ]
+}

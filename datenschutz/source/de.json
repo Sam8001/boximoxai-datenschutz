@@ -1,0 +1,162 @@
+{
+  "lang": "de",
+  "language": "Deutsch",
+  "title": "Datenschutzerklärung für BoximoxAI",
+  "intro": "Hier erfährst du, welche Daten BoximoxAI verarbeitet, wofür sie gebraucht werden und welche Möglichkeiten du hast, sie zu verwalten oder löschen zu lassen.",
+  "updated_label": "Stand",
+  "draft": "Entwurf: Die markierten Angaben müssen vor der Veröffentlichung bestätigt und ergänzt werden.",
+  "pending": "Vor Veröffentlichung ergänzen",
+  "contents": "Inhalt",
+  "languages": "Sprache",
+  "contact_label": "Datenschutzkontakt",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Das Wichtigste vorab",
+      "paragraphs": [
+        "Dein Inventar – Häuser oder Büros, Räume, Kartons, Gegenstände und gespeicherte Fotos – wird zunächst lokal auf deinem Gerät verwaltet. Normale Inventarsuchen und das Lesen von BoximoxAI-QR-Codes erfolgen lokal. Der Fotoabgleich ist deaktiviert. Beim Geräteabgleich bleiben Fotos und Vorschaubilder auf deinem Gerät.",
+        "Eine Internetverbindung wird insbesondere für die Anmeldung, Käufe, KI-Funktionen und das Absenden von Feedback benötigt. Wenn du eine KI-Analyse startest, werden die dafür ausgewählten Inhalte an unser Backend und die beteiligten KI-Anbieter übermittelt. Eine Kontolöschung löscht nicht automatisch dein lokales Inventar oder selbst exportierte Sicherungen."
+      ]
+    },
+    {
+      "id": "controller",
+      "title": "Wer für die Verarbeitung verantwortlich ist",
+      "paragraphs": [
+        "Verantwortlich für die Verarbeitung im Zusammenhang mit BoximoxAI ist der unten genannte Betreiber. Du kannst dich bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte an die angegebene E-Mail-Adresse wenden."
+      ]
+    },
+    {
+      "id": "local",
+      "title": "Inventar, Fotos und Sicherungen auf deinem Gerät",
+      "paragraphs": [
+        "Lokal gespeichert werden insbesondere Orts- und Raumnamen, Kartonnamen und Kartonnummern, Kategorien, Beschreibungen, Mengen, Status- und Handhabungshinweise sowie optionale Karton- und Gegenstandsfotos einschließlich Vorschaubildern. Ortsnamen wie „Haus 1“ sind von dir eingegebene Bezeichnungen; sie stammen nicht aus GPS-Ortung. Auch deine Sprach- und Darstellungsauswahl sowie der ausgewählte Ort können lokal verarbeitet werden.",
+        "Die App benötigt diese Daten, um deine gewünschten Inventarfunktionen bereitzustellen. Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. b DSGVO. Du entscheidest, welche optionalen Angaben und Fotos du hinzufügst. Vermeide unnötige Angaben über andere Personen oder besonders sensible Inhalte.",
+        "Beim Export einer Sicherung oder eines Druckdokuments bestimmst du den Speicherort, den Druckdienst oder den Empfänger. Sicherungsdateien können Inventar und Fotos enthalten und sind nicht durch eine zusätzliche, von BoximoxAI vergebene Passwortverschlüsselung geschützt. Bewahre sie entsprechend sorgfältig auf. Von dir gewählte Cloud-, Datei-, Freigabe- oder Druckdienste verarbeiten Daten nach ihren eigenen Bedingungen. Je nach Geräteeinstellungen können außerdem Sicherungsfunktionen von Apple oder Google App-Daten erfassen.",
+        "Die Geräte-Synchronisierung ist freiwillig und muss in den Einstellungen eingerichtet werden. Übertragen werden die von dir erfassten Inventarinhalte einschließlich Namen, Beschreibungen, Mengen, Kategorien, Zuordnungen, Handhabungshinweisen. Der lokale Datenbestand bleibt für die Offline-Nutzung erhalten. Die verschlüsselten Inventarstände werden über unser Backend in Google Cloud Firestore gespeichert. Die Bereitstellung dieser von dir angeforderten Funktion erfolgt auf Grundlage von Artikel 6 Absatz 1 Buchstabe b DSGVO.",
+        "Für den verschlüsselten Abgleich verwendet die App AES-256-GCM mit zufälligen Nonces und getrennten, aus einem zufälligen 256-Bit-Schlüssel abgeleiteten Schlüsseln. Der Wiederherstellungsschlüssel wird im geschützten Schlüsselspeicher des Geräts abgelegt und von der App weder an uns noch an Firebase übermittelt. Weitere Geräte werden mit demselben Account per bestätigter QR-Kopplung oder mit dem Wiederherstellungsschlüssel eingerichtet. Bewahre ihn sicher auf: Ohne den Schlüssel und ohne ein bereits eingerichtetes Gerät können auch wir die Cloud-Inhalte nicht entschlüsseln oder wiederherstellen.",
+        "Die Ende-zu-Ende-Verschlüsselung schützt die Inhalte des Inventar-Abgleichs. Account-Zuordnung, IP-Adresse, Datenmengen, Übertragungszeiten, Versionsnummern und eine nicht geheime Schlüsselkennung bleiben technisch verarbeitbar. Sie macht den Dienst nicht anonym. Lokale SQLite-Daten und von dir exportierte ZIP-Sicherungen erhalten durch diese Sync-Funktion keine zusätzliche Inhaltsverschlüsselung. Bewusst gestartete KI-Analysen sind ein eigener Verarbeitungsvorgang: Die dafür ausgewählten Bilder, Aufnahmen und Texte müssen von den in diesem Dokument genannten KI-Diensten verarbeitet werden und sind nicht von der Sync-Verschlüsselung umfasst.",
+        "Bei der QR-Kopplung liest das neue Gerät einen kurzzeitig gültigen Verbindungscode vom bisherigen Gerät. Der QR-Code enthält keinen Inventar- oder Wiederherstellungsschlüssel. Die App lädt dafür kein Kamerabild zum Kopplungsserver hoch. Nach dem Vergleich der angezeigten Prüfziffern muss die Verbindung auf dem bisherigen Gerät ausdrücklich bestätigt werden. Der Schlüssel wird über einen zusätzlich verschlüsselten Kanal übertragen; private temporäre Schlüssel und das QR-Geheimnis werden nicht an den Server gesendet. Unser Backend verarbeitet dafür öffentliche Verbindungsschlüssel, eine Account-Zuordnung, zufällige Kennungen, Gültigkeitszeit und einen verschlüsselten Schlüsselumschlag. Der Code gilt fünf Minuten und für eine Verbindung. Nach bestätigtem Empfang oder Abbruch wird der Umschlag entfernt. Abgelaufene Kopplungen sind gesperrt; verbleibende Daten werden beim nächsten Zugriff, bei einer neuen Kopplung, durch eine entsprechend eingerichtete Cloud-Löschregel oder bei Accountlöschung bereinigt. Die genaue physische Löschung ist daher nicht sekundengenau zugesagt. Das eingerichtete Gerät speichert den Inventarschlüssel im geschützten Gerätespeicher und kann danach ohne erneutes Scannen weiter synchronisieren.",
+        "Cloud-Synchronisierung und das Verbinden weiterer Geräte stehen nur mit einer aktiven Premium+-Berechtigung zur Verfügung und müssen zusätzlich ausdrücklich aktiviert werden. Unser Backend prüft die Berechtigung anhand deiner Account-Kennung bei RevenueCat; ein KI-Credit-Guthaben allein genügt nicht. Ohne Premium+ findet kein weiterer Cloud-Abgleich statt. Bereits vorhandene lokale Daten und Schlüssel bleiben erhalten; vorhandene Cloud-Daten werden durch den Wegfall von Premium+ nicht automatisch gelöscht. Die Accountlöschung bleibt auch ohne Premium+ möglich.",
+        "Der Fotoabgleich ist deaktiviert. Beim Geräteabgleich bleiben Fotos und Vorschaubilder auf deinem Gerät."
+      ]
+    },
+    {
+      "id": "family",
+      "title": "Familienfreigabe",
+      "paragraphs": [
+        "Mit Premium+ kannst du ausgewählte Kartons mit eingeladenen BoximoxAI-Konten teilen. Eingeladene benötigen kein eigenes Abo. Freigegebene Inhalte werden auf dem Gerät verschlüsselt und in Firestore gespeichert. Berechtigte Empfänger können die Inhalte lesen und je nach Freigabe bearbeiten. Für Einladungen und die Verwaltung der Freigabe verarbeitet das Backend die Konto-Kennungen und E-Mail-Adressen beider Seiten, Zugriffsrechte, Freigabestatus, Zeitangaben sowie öffentliche Schlüssel und verschlüsselte Schlüsselumschläge. Die Beteiligten können die E-Mail-Adresse der jeweils anderen Seite sehen. Rechtsgrundlage für die angeforderte Freigabe ist Art. 6 Abs. 1 Buchst. b DSGVO. Bereits von Empfängern erstellte Kopien bleiben in deren Kontrolle."
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Optionales Konto und Anmeldung",
+      "paragraphs": [
+        "Die manuelle Inventarverwaltung ist ohne Anmeldung möglich. Für kontobezogene Funktionen, insbesondere KI und angemeldete Kaufzuordnung, verwenden wir Firebase Authentication von Google. Du kannst dich über Google oder Apple anmelden und unterstützte Anmeldeverfahren mit deinem Konto verknüpfen.",
+        "Verarbeitet werden die Firebase-Nutzerkennung, die mitgeteilte E-Mail-Adresse – gegebenenfalls eine Apple-Relay-Adresse –, der Anmeldeanbieter sowie technisch erforderliche Anmelde- und Sicherheitsdaten. Der Anmeldedienst kann außerdem Profilinformationen verarbeiten, die der jeweilige Anbieter freigibt. Wir erhalten nicht dein Google- oder Apple-Passwort. Anmeldeinformationen werden auf dem Gerät für die Sitzung gespeichert; das Backend prüft den Anmeldenachweis und die Nutzerkennung.",
+        "Die Verarbeitung dient der Bereitstellung deines Kontos und dem Schutz vor unberechtigter Nutzung, auf Grundlage von Art. 6 Abs. 1 Buchst. b und f DSGVO. Google und Apple verarbeiten Daten im Zusammenhang mit ihren eigenen Kontodiensten zusätzlich nach ihren Datenschutzhinweisen."
+      ]
+    },
+    {
+      "id": "ai",
+      "title": "Bilderkennung, Audioerkennung und KI-Assistent",
+      "paragraphs": [
+        "Die KI-Funktionen sind optional. Bei der Bilderkennung wird das ausgewählte oder aufgenommene Bild mit Angaben zum Analysemodus und zur App-Sprache an unser Backend und von dort an OpenAI übertragen. Alles, was im Bild sichtbar ist, kann Bestandteil dieser Verarbeitung sein. Nimm deshalb möglichst nur die betreffenden Gegenstände auf.",
+        "Bei der Audioerkennung wird deine aktiv versendete Aufnahme an unser Backend und an Deepgram zur Spracherkennung übermittelt. Das Transkript wird anschließend durch OpenAI ausgewertet. Für den KI-Assistenten können außerdem deine Nachricht, ein begrenzter Gesprächsverlauf, Raum- und Kategorienamen sowie der für die Anfrage erforderliche Sitzungs- oder Entwurfskontext übermittelt werden. Inhalte, die du in Nachrichten oder Entwürfe aufnimmst, können dadurch ebenfalls übertragen werden. Dein vollständiges Inventar wird dabei nicht routinemäßig als Datenbank hochgeladen.",
+        "OpenAI verarbeitet Bilder und Texte; API-Inhalte werden standardmäßig nicht zum Modelltraining verwendet. Anbieter können Daten zu Sicherheitszwecken aufbewahren. Unser Backend setzt für OpenAI-Anfragen store=false und übermittelt bei Deepgram mip_opt_out=true, um die Teilnahme am Modellverbesserungsprogramm für diese Anfragen abzulehnen. Das ist keine Zusage, dass bei den Anbietern keinerlei technische Verarbeitung oder Aufbewahrung stattfindet.",
+        "Die Analyse dient der von dir angeforderten Funktion; Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. b DSGVO. Soweit für eine Verarbeitung eine gesonderte Einwilligung erforderlich ist und eingeholt wird, ist Art. 6 Abs. 1 Buchst. a DSGVO die Grundlage. Eine Geräteberechtigung allein ist keine pauschale Einwilligung in jede Datenübermittlung.",
+        "KI-Ausgaben können fehlerhaft sein. Prüfe die Vorschau, bevor du Inhalte übernimmst. Es werden keine ausschließlich automatisierten Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung über dich getroffen. Einzelheiten zur vorübergehenden Speicherung von Analyseergebnissen findest du unter „Speicherdauer“."
+      ]
+    },
+    {
+      "id": "permissions",
+      "title": "Kamera, Mikrofon, Fotos und Diktieren",
+      "paragraphs": [
+        "Die Kamera wird zum Scannen von QR-Codes und für von dir ausgelöste Fotos verwendet. Das Mikrofon wird für Aufnahmen und Diktierfunktionen genutzt. Über die Fotoauswahl gibst du die gewünschten Bilder frei. Wir fordern keinen Zugriff auf deine Kontakte und keine GPS-Standortberechtigung an.",
+        "Das kurze Diktieren in Formularfeldern nutzt den Spracherkennungsdienst deines Geräts. Abhängig von Gerät, Sprache und Einstellungen kann dieser Dienst Audio an Apple, Google oder den eingerichteten Spracherkennungsanbieter übertragen. Eine ausschließlich lokale Erkennung wird nicht zugesichert. Diese Funktion ist von der KI-Audioanalyse über Deepgram und OpenAI zu unterscheiden.",
+        "Du kannst Berechtigungen in den Systemeinstellungen ändern oder widerrufen. Die entsprechende Funktion steht dann möglicherweise nicht mehr zur Verfügung. Die technische Berechtigung und die datenschutzrechtliche Grundlage sind getrennt zu betrachten."
+      ]
+    },
+    {
+      "id": "purchases",
+      "title": "Premium, Käufe und KI-Credits",
+      "paragraphs": [
+        "Käufe werden über Apple App Store oder Google Play abgewickelt. Zur Prüfung von Käufen, zur Wiederherstellung, zur Freischaltung und zur Verwaltung von KI-Credits setzen wir RevenueCat ein. Verarbeitet werden insbesondere Produkt- und Transaktionsdaten, Kaufhistorie, Berechtigungen, Guthaben sowie eine RevenueCat-Kennung. Ohne Anmeldung kann dies eine vom SDK erzeugte Kennung sein; nach Anmeldung wird die Firebase-Nutzerkennung zur Kaufzuordnung verwendet.",
+        "Die Store- und RevenueCat-Dienste verarbeiten außerdem die für ihre Dienste benötigten technischen Angaben. Kaufdaten können für Kaufstatistiken und die Verwaltung im RevenueCat-Dashboard ausgewertet werden. Die App übermittelt RevenueCat im geprüften Ablauf keine E-Mail-Adresse als zusätzliches Kundenattribut. Zahlungsdaten wie vollständige Karteninformationen werden von den Zahlungsdiensten verarbeitet, nicht von unserer Inventardatenbank.",
+        "Rechtsgrundlagen sind Art. 6 Abs. 1 Buchst. b DSGVO für Kauf und Freischaltung, Buchst. c für gesetzliche Pflichten und Buchst. f für Missbrauchsvermeidung und die nachvollziehbare Abrechnung. Die Löschung deines App-Kontos kündigt ein etwaiges Store-Abonnement nicht automatisch."
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "Feedback und Kontakt",
+      "paragraphs": [
+        "Wenn du eine Idee oder Fehlermeldung sendest, erhält unser Backend deinen Text, die gewählte Sprache, die Art der Meldung und eine zufällige Vorgangskennung. Der Eingang wird mit einem Zeitstempel gespeichert. Eine Anmeldung ist hierfür nicht erforderlich. Die Feedbackfunktion sendet nicht automatisch dein Inventar, Fotos, Audio oder deine Konto-E-Mail-Adresse mit.",
+        "Wenn du uns per E-Mail kontaktierst, verarbeiten wir deine Absenderadresse, den Nachrichteninhalt und gegebenenfalls Anhänge. Bitte sende keine Passwörter, vollständigen Zahlungsdaten oder unnötigen sensiblen Informationen. Wir nutzen diese Angaben zur Bearbeitung deines Anliegens und zur Verbesserung bzw. Fehlerbehebung: Art. 6 Abs. 1 Buchst. b DSGVO bei vertragsbezogenen Anfragen, ansonsten Buchst. f wegen unseres Interesses an Support und einem zuverlässigen Dienst."
+      ]
+    },
+    {
+      "id": "security",
+      "title": "Backend, Sicherheit und technische Nutzungsdaten",
+      "paragraphs": [
+        "Bei einer Verbindung sehen unser Backend und die beteiligten Infrastrukturbetreiber technisch bedingt unter anderem die IP-Adresse und Verbindungsdaten. Für Sicherheit, Begrenzung von Anfragen, Kontingente und Credit-Abrechnung werden zusätzlich Vorgangskennungen, Zeitpunkte, Bearbeitungsstatus, Nutzerbezüge und Nutzungszähler verarbeitet. IP-Adressen und Nutzerkennungen werden in Teilen dieser Systeme als HMAC-Pseudonyme verwendet; einzelne Credit-Vorgänge enthalten auch die Firebase-Nutzerkennung. Pseudonyme Daten sind nicht automatisch anonym.",
+        "Technische Kostenereignisse können Anbieter- und Anfragekennungen, Modell, Tokenmengen, Audiodauer, Status und geschätzte Kosten enthalten. Nutzungs- und Credit-Daten werden in Firestore verarbeitet; technische Ereignisse können je nach Betriebskonfiguration in Firestore oder Betriebsprotokollen liegen. Reguläre Kostenereignisse enthalten keine Bilddateien, Audioaufnahmen oder vollständigen Nachrichtentexte.",
+        "Wir verwenden diese Daten zur Absicherung, zum stabilen Betrieb und zur korrekten Abrechnung. Rechtsgrundlagen sind Art. 6 Abs. 1 Buchst. b und f DSGVO sowie gegebenenfalls Buchst. c. Die geprüfte App enthält kein Werbenetzwerk, kein eigenes werbeübergreifendes Tracking und keine eingebundene Firebase-Analytics- oder Crashlytics-Komponente. Kaufstatistiken sind davon zu unterscheiden.",
+        "Backend-Hosting: [[backend_hosting]]. Firestore-Speicherregion: [[firestore_region]].",
+        "[[storage_region]]."
+      ]
+    },
+    {
+      "id": "retention",
+      "title": "Wie lange Daten gespeichert werden",
+      "paragraphs": [
+        "Lokale Inventardaten bleiben grundsätzlich gespeichert, bis du sie löschst, durch einen Import ersetzt oder App-Daten entfernt werden. Eigene Exporte und Sicherungen musst du am jeweiligen Speicherort gesondert löschen. Vor einer Wiederherstellung legt die App eine lokale Sicherung des vorherigen Bestands an; auch diese kann weiterhin personenbezogene Daten enthalten.",
+        "KI-Gespräche, Entwürfe und versendetes Audio können während einer Sitzung vorübergehend in der lokalen App-Datenbank liegen. Die App ist darauf ausgelegt, diese Sitzungsdaten beim Beenden der Sitzung bzw. beim nächsten Öffnen der Datenbank zu verwerfen. Das Inventar, das du aus einer Vorschau ausdrücklich übernimmst, bleibt davon unberührt.",
+        "Bei der KI-Analyse legt unser Backend die dafür übertragenen Rohbilder und Rohaufnahmen nicht als dauerhaftes Medienarchiv ab. Davon zu unterscheiden ist der verschlüsselte Fotospeicher der optionalen Geräte-Synchronisierung. Für zuverlässige Credit-Abrechnung werden erfolgreiche KI-Antworten jedoch vorübergehend in Firestore zwischengespeichert; sie können Transkripte und erkannte Inhalte enthalten. Die vorgesehene Ablaufzeit beträgt 24 Stunden nach Erfolg. Die Entfernung erfolgt durch einen laufenden Bereinigungsprozess und kann sich bei Unterbrechungen verzögern. Abrechnungs- und Vorgangsmetadaten können darüber hinaus bestehen bleiben.",
+        "Feedback und Kontaktanfragen: [[feedback_retention]]. Technische Protokolle und Nutzungsdaten: [[technical_retention]]. Konto-, Kauf- und Abrechnungsdaten: [[billing_retention]]. Gesetzlich erforderliche Nachweise können länger aufbewahrt werden; dabei werden nicht mehr benötigte Inhalte nach Möglichkeit getrennt oder eingeschränkt verarbeitet. Für die eigenen Aufbewahrungen externer Anbieter gelten ergänzend deren Informationen.",
+        "Die verschlüsselten Cloud-Inventardaten werden für die aktivierte Synchronisierung aufbewahrt. Ausschalten oder Abmelden löscht sie nicht. Änderungen und Löschungen werden beim nächsten erfolgreichen Abgleich übertragen. Vor einer Konfliktauflösung speichert die App eine lokale Wiederherstellungskopie; die letzte solche Kopie wird bei einer weiteren Auflösung ersetzt. Schlüssel bleiben im geschützten Gerätespeicher bis zu ihrer Entfernung; ihr Verhalten bei einer Deinstallation hängt vom Betriebssystem ab."
+      ]
+    },
+    {
+      "id": "transfers",
+      "title": "Empfänger und Verarbeitung außerhalb des EWR",
+      "paragraphs": [
+        "Abhängig von den genutzten Funktionen erhalten unser Hostinganbieter, Google/Firebase, Apple, RevenueCat, OpenAI und Deepgram die jeweils erforderlichen Daten. Hinzu kommen die von dir ausgewählten Backup-, E-Mail-, Freigabe- oder Druckdienste. Wir verkaufen deine Inventarinhalte nicht und nutzen sie nicht für personalisierte Werbung.",
+        "Für Google-Dienste hängt der einschlägige Auftragsverarbeitungsvertrag vom Dienst ab. Für Cloud Firestore verweist Google auf seinen Cloud-Auftragsverarbeitungsvertrag. Der veröffentlichte OpenAI-Auftragsverarbeitungsvertrag ist in das OpenAI Services Agreement einbezogen. RevenueCat bindet seine EU-Standardvertragsklauseln über seinen Auftragsverarbeitungsvertrag ein, soweit dieser für die Kundenvereinbarung gilt. Deepgram verweist für Kundendaten auf Kundenvereinbarungen mit EU-Standardvertragsklauseln.",
+        "Bei internationalen Anbietern kann die Verarbeitung auch außerhalb des Europäischen Wirtschaftsraums, insbesondere in den USA, stattfinden. Eine europäische Firestore-Region allein bedeutet nicht, dass alle Dienste ausschließlich in Europa verarbeiten. Die für den konkreten Betrieb bestätigten Garantien und Übermittlungsgrundlagen sind: [[transfer_safeguards]]. Informationen und gegebenenfalls eine Kopie der einschlägigen Garantien kannst du über unseren Datenschutzkontakt anfordern."
+      ]
+    },
+    {
+      "id": "delete-account",
+      "title": "Konto und personenbezogene Daten löschen lassen",
+      "paragraphs": [
+        "Du kannst in der App unter Einstellungen → Konto → Konto löschen die Löschung deines Anmeldekontos starten. Zur Sicherheit kann eine erneute Anmeldung erforderlich sein. Bei Apple-Anmeldung wird der verfügbare Widerrufsablauf für die Anmeldeberechtigung verwendet. Dein Google- oder Apple-Konto selbst wird dadurch nicht gelöscht.",
+        "Vor dem Löschen des Firebase-Anmeldekontos fordert die App die Löschung des Cloud-Inventars und der zugehörigen Cloud-Fotos an. Dafür ist kein Entschlüsselungsschlüssel nötig. Scheitert die Bereinigung, wird der Löschvorgang nicht als abgeschlossen behandelt und kann wiederholt werden. Ein pseudonymisierter technischer Löschmarker bleibt bestehen, damit verspätete Geräteübertragungen gelöschte Cloud-Daten nicht erneut anlegen. Nicht automatisch entfernt werden damit sämtliche Credit-, RevenueCat-, Feedback- oder gesetzlich aufzubewahrenden Datensätze. Für die Löschung weiterer personenbezogener Daten oder wenn du die App nicht mehr nutzen kannst, sende deine Anfrage an den unten verlinkten Datenschutzkontakt und nenne „BoximoxAI“ sowie die zum Konto gehörende E-Mail-Adresse oder Nutzerkennung, soweit bekannt. Du musst kein neues Konto anlegen. Wir verlangen keine Passwörter und prüfen die Zuordnung nur im erforderlichen Umfang.",
+        "Bei der Kontolöschung entfernt das Backend auch Familienfreigaben, an denen dein Konto als einladende oder eingeladene Person beteiligt ist.",
+        "Wir bearbeiten Löschanfragen nach den geltenden gesetzlichen Vorgaben. Soweit bestimmte Daten aus gesetzlichen Gründen oder zur Abwehr konkreter Ansprüche erhalten bleiben müssen, erklären wir dir Umfang und Grund der Ausnahme. Eine Löschung auf unseren Systemen entfernt keine von dir selbst exportierten Dateien oder bei anderen Diensten gespeicherten Kopien. Lokale Inventareinträge kannst du in der App löschen; für das vollständige Entfernen lokaler App-Daten stehen die Funktionen des Betriebssystems zur Verfügung."
+      ]
+    },
+    {
+      "id": "rights",
+      "title": "Deine Rechte und freiwillige Angaben",
+      "paragraphs": [
+        "Soweit die DSGVO anwendbar ist und die jeweiligen Voraussetzungen erfüllt sind, kannst du Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit verlangen. Gegen Verarbeitungen auf Grundlage berechtigter Interessen kannst du aus Gründen, die sich aus deiner besonderen Situation ergeben, Widerspruch einlegen. Eine erteilte Einwilligung kannst du mit Wirkung für die Zukunft widerrufen; die Rechtmäßigkeit der vorherigen Verarbeitung bleibt unberührt.",
+        "Du kannst dich bei einer Datenschutzaufsichtsbehörde beschweren, insbesondere an deinem Aufenthaltsort, Arbeitsplatz oder am Ort des vermuteten Verstoßes. Für den Sitz des Betreibers ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen eine zuständige Anlaufstelle. Nutze für Anfragen an uns die unten genannte E-Mail-Adresse.",
+        "Ohne die für eine Online-Funktion erforderlichen Angaben kann diese Funktion nicht bereitgestellt werden. Die manuelle Inventarverwaltung bleibt grundsätzlich ohne Konto und KI nutzbar. Zielgruppe und Regelungen für Minderjährige: [[audience]]. Wenn du glaubst, dass Daten eines Kindes unzulässig verarbeitet wurden, kontaktiere uns bitte."
+      ]
+    },
+    {
+      "id": "website",
+      "title": "Diese Datenschutzseite auf GitHub Pages",
+      "paragraphs": [
+        "Diese statischen Seiten verwenden keine von uns eingebundenen Analyse-, Werbe- oder Tracking-Skripte, keine extern geladenen Schriftarten und keine eigenen Cookies. Es gibt kein Kontaktformular; ein E-Mail-Link öffnet dein E-Mail-Programm.",
+        "Bei Veröffentlichung über GitHub Pages verarbeitet GitHub technische Zugriffsdaten, darunter IP-Adressen zu Sicherheitszwecken. Diese Verarbeitung findet beim Hostinganbieter statt. Rechtsgrundlage für die Bereitstellung dieser Informationsseite ist Art. 6 Abs. 1 Buchst. f DSGVO. Weitere Informationen findest du in den verlinkten GitHub-Datenschutzhinweisen."
+      ]
+    },
+    {
+      "id": "updates",
+      "title": "Änderungen und weitere Informationen",
+      "paragraphs": [
+        "Wir aktualisieren diese Erklärung, wenn sich die Funktionen, eingesetzten Dienste oder rechtlichen Anforderungen ändern. Das Datum oben zeigt den Stand dieses Textes. Wesentliche Änderungen werden, soweit erforderlich, zusätzlich in der App mitgeteilt. Die folgenden Anbieterinformationen ergänzen diese Erklärung; sie ersetzen unsere Verantwortung für BoximoxAI nicht."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "app_name": "BoximoxAI",
+  "controller": "Sam Haghnejad",
+  "address": [
+    "Vaalser Straße 257C",
+    "52074 Aachen",
+    "Deutschland"
+  ],
+  "email": "samjad80@icloud.com",
+  "updated": "2026-11-20",
+  "confirmed": {
+    "backend_hosting": {
+      "de": "Helsinki, Finnland",
+      "en": "Helsinki, Finland",
+      "es": "Helsinki, Finlandia",
+      "fr": "Helsinki, Finlande",
+      "it": "Helsinki, Finlandia",
+      "nl": "Helsinki, Finland"
+    },
+    "firestore_region": {
+      "de": "Europa (eur3), mit vollständigen Datenreplikaten in Belgien und den Niederlanden und einer Replik für die Abstimmung in Finnland",
+      "en": "Europe (eur3), with full data replicas in Belgium and the Netherlands and a witness replica in Finland",
+      "es": "Europa (eur3), con réplicas completas en Bélgica y los Países Bajos y una réplica testigo en Finlandia",
+      "fr": "Europe (eur3), avec des répliques complètes en Belgique et aux Pays-Bas et une réplique témoin en Finlande",
+      "it": "Europa (eur3), con repliche complete in Belgio e nei Paesi Bassi e una replica testimone in Finlandia",
+      "nl": "Europa (eur3), met volledige replica’s in België en Nederland en een getuigenreplica in Finland"
+    },
+    "feedback_retention": {
+      "de": "Feedback wird zur Bearbeitung und für nötige Rückfragen aufbewahrt. Serverdatei und E-Mail-Postfach haben keine gemeinsam festgelegte automatische Löschfrist. Die Notwendigkeit einer weiteren Aufbewahrung richtet sich nach dem konkreten Anliegen und etwaigen Nachweis- oder Aufbewahrungspflichten",
+      "en": "Feedback is retained to handle your request and any necessary follow-up. The server file and email inbox have no shared automatic deletion period. Any further retention depends on the specific request and applicable record-keeping obligations",
+      "es": "Los comentarios se conservan para gestionar tu consulta y realizar el seguimiento necesario. El archivo del servidor y el buzón no tienen un plazo común de eliminación automática. La conservación posterior depende de la consulta concreta y de las obligaciones de conservación aplicables",
+      "it": "I riscontri sono conservati per gestire la richiesta e gli eventuali contatti successivi. Il file del server e la casella e-mail non hanno un termine comune di cancellazione automatica. L’ulteriore conservazione dipende dalla richiesta e dagli obblighi applicabili",
+      "fr": "Les retours sont conservés pour traiter ta demande et assurer le suivi nécessaire. Le fichier du serveur et la boîte e-mail n’ont pas de délai commun de suppression automatique. La conservation ultérieure dépend de la demande et des obligations applicables",
+      "nl": "Feedback wordt bewaard om je verzoek te behandelen en zo nodig op te volgen. Voor het serverbestand en de mailbox geldt geen gezamenlijke automatische verwijdertermijn. Verdere bewaring hangt af van het concrete verzoek en de toepasselijke bewaarplichten"
+    },
+    "technical_retention": {
+      "de": "Die Protokolle des App-Containers werden nach Dateigröße rotiert (maximal drei Dateien mit je 10 MB). Temporäre KI-Ergebnisse laufen nach 24 Stunden ab und werden durch das Backend bereinigt. Für verbleibende technische Nutzungsdatensätze in Firestore ist keine automatische Löschfrist eingerichtet",
+      "en": "App container logs rotate by size, with up to three files of 10 MB each. Temporary AI results expire after 24 hours and are removed by backend cleanup. Remaining technical usage records in Firestore have no automatic deletion period configured",
+      "es": "Los registros del contenedor de la aplicación se rotan por tamaño, con hasta tres archivos de 10 MB cada uno. Los resultados temporales de IA caducan a las 24 horas y se eliminan mediante la limpieza del servidor. Los registros técnicos de uso restantes en Firestore no tienen un plazo de eliminación automática configurado",
+      "it": "I log del contenitore dell’app ruotano per dimensione, fino a tre file da 10 MB ciascuno. I risultati temporanei dell’IA scadono dopo 24 ore e sono rimossi dal processo di pulizia del server. I registri tecnici residui in Firestore non hanno un termine di cancellazione automatica configurato",
+      "fr": "Les journaux du conteneur de l’application sont renouvelés selon leur taille, avec jusqu’à trois fichiers de 10 Mo chacun. Les résultats temporaires de l’IA expirent après 24 heures et sont supprimés par le processus de nettoyage du serveur. Les données techniques d’utilisation restantes dans Firestore n’ont pas de délai de suppression automatique configuré",
+      "nl": "Logbestanden van de appcontainer rouleren op bestandsgrootte, met maximaal drie bestanden van elk 10 MB. Tijdelijke AI-resultaten verlopen na 24 uur en worden door het opruimproces van de server verwijderd. Voor resterende technische gebruiksgegevens in Firestore is geen automatische verwijdertermijn ingesteld"
+    },
+    "billing_retention": {
+      "de": "Konto-, Kauf- und Credit-Daten werden zur Bereitstellung und Wiederherstellung von Käufen, zur korrekten Abrechnung und zur Vermeidung doppelter Buchungen aufbewahrt. Nach Kontolöschung können dafür weiterhin erforderliche Nachweise, insbesondere aufgrund gesetzlicher Pflichten oder konkreter Ansprüche, bestehen bleiben",
+      "en": "Account, purchase and credit records are kept to provide and restore purchases, reconcile charges and prevent duplicate transactions. Records still needed for these purposes, particularly for legal obligations or specific claims, may remain after account deletion",
+      "es": "Los datos de cuenta, compras y créditos se conservan para ofrecer y restaurar compras, conciliar cargos y evitar transacciones duplicadas. Tras eliminar la cuenta pueden mantenerse los justificantes necesarios, en particular por obligaciones legales o reclamaciones concretas",
+      "it": "I dati di account, acquisti e crediti sono conservati per fornire e ripristinare gli acquisti, verificare gli addebiti ed evitare transazioni duplicate. Dopo la cancellazione dell’account possono restare i documenti necessari, in particolare per obblighi legali o richieste concrete",
+      "fr": "Les données de compte, d’achat et de crédits sont conservées pour fournir et restaurer les achats, vérifier les débits et éviter les transactions en double. Les justificatifs nécessaires peuvent subsister après la suppression du compte, notamment en raison d’obligations légales ou de réclamations précises",
+      "nl": "Account-, aankoop- en creditgegevens worden bewaard om aankopen te leveren en te herstellen, afschrijvingen te controleren en dubbele transacties te voorkomen. Na accountverwijdering kunnen noodzakelijke bewijsstukken behouden blijven, met name voor wettelijke verplichtingen of concrete claims"
+    },
+    "transfer_safeguards": null,
+    "audience": {
+      "de": "BoximoxAI richtet sich an ein allgemeines Publikum. Die App legt kein Mindestalter fest",
+      "en": "BoximoxAI is intended for a general audience. The app does not set a minimum age",
+      "es": "BoximoxAI está dirigida al público general. La aplicación no establece una edad mínima",
+      "it": "BoximoxAI è rivolta a un pubblico generale. L’app non stabilisce un’età minima",
+      "fr": "BoximoxAI s’adresse au grand public. L’application ne fixe pas d’âge minimum",
+      "nl": "BoximoxAI is bedoeld voor een algemeen publiek. De app stelt geen minimumleeftijd vast"
+    },
+    "storage_region": {
+      "de": "Der Fotoabgleich ist deaktiviert. Beim Geräteabgleich bleiben Fotos und Vorschaubilder auf deinem Gerät",
+      "en": "Photo sync is disabled. Photos and thumbnails stay on your device during device sync",
+      "es": "La sincronización de fotos está desactivada. Las fotos y miniaturas permanecen en el dispositivo durante la sincronización",
+      "it": "La sincronizzazione delle foto è disattivata. Foto e miniature restano sul dispositivo durante la sincronizzazione",
+      "fr": "La synchronisation des photos est désactivée. Les photos et miniatures restent sur l’appareil pendant la synchronisation",
+      "nl": "Fotosynchronisatie is uitgeschakeld. Foto’s en miniaturen blijven tijdens de synchronisatie op het apparaat"
+    }
+  }
+}
